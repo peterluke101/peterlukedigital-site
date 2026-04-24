@@ -299,9 +299,6 @@ export default function Home() {
           <div className="pointer-events-none absolute -left-[10%] top-[-10%] h-[70%] w-[55%] bg-[radial-gradient(ellipse,rgba(0,212,255,0.30),transparent_65%)] blur-[60px]" />
           <div className="pointer-events-none absolute right-[-5%] bottom-[-10%] h-[50%] w-[40%] bg-[radial-gradient(ellipse,rgba(138,43,255,0.25),transparent_65%)] blur-[50px]" />
           <div className="mx-auto w-full max-w-[1200px] px-7 py-[110px]">
-            <div className="mb-5 flex items-center gap-3">
-              <Image src="/assets/images/logo-icon.png" alt="" width={32} height={32} className="h-8 w-8 object-contain opacity-90" />
-            </div>
             <h2 className="text-2xl font-bold text-text sm:text-3xl">
               Everything included in your plan.
             </h2>
@@ -362,9 +359,6 @@ export default function Home() {
         <MotionSection id="how-it-works" className="relative overflow-hidden bg-surface scroll-mt-24">
           <div className="pointer-events-none absolute left-[30%] top-[-20%] h-[80%] w-[50%] bg-[radial-gradient(ellipse,rgba(138,43,255,0.30),transparent_65%)] blur-[60px]" />
           <div className="mx-auto w-full max-w-[1200px] px-7 py-[110px]">
-            <div className="mb-5 flex items-center gap-3">
-              <Image src="/assets/images/logo-icon.png" alt="" width={32} height={32} className="h-8 w-8 object-contain opacity-90" />
-            </div>
             <h2 className="text-2xl font-bold text-text sm:text-3xl">
               Simple process. Fast results.
             </h2>
@@ -394,9 +388,6 @@ export default function Home() {
           <div className="pointer-events-none absolute -right-[5%] top-[-10%] h-[80%] w-[55%] bg-[radial-gradient(ellipse,rgba(0,212,255,0.32),transparent_65%)] blur-[60px]" />
           <div className="pointer-events-none absolute -left-[10%] bottom-[-20%] h-[60%] w-[45%] bg-[radial-gradient(ellipse,rgba(255,0,224,0.25),transparent_65%)] blur-[50px]" />
           <div className="mx-auto w-full max-w-[1200px] px-7 py-[110px]">
-            <div className="mb-5 flex items-center gap-3">
-              <Image src="/assets/images/logo-icon.png" alt="" width={32} height={32} className="h-8 w-8 object-contain opacity-90" />
-            </div>
             <h2 className="text-2xl font-bold text-text sm:text-3xl">
               Simple, Transparent Pricing
             </h2>
@@ -496,7 +487,7 @@ export default function Home() {
                   className="rounded-2xl border border-[rgba(255,255,255,0.08)] bg-background p-[28px] transition-colors duration-200 hover:border-[rgba(255,255,255,0.14)]"
                 >
                   <div className="flex items-start justify-between">
-                    <span className="text-2xl">{addon.icon}</span>
+                    <Image src="/assets/images/logo-icon.png" alt="" width={36} height={36} className="h-9 w-9 object-contain" />
                     <span className="text-xl font-bold tracking-[-0.02em] text-text">{addon.price}</span>
                   </div>
                   <h3 className="mt-4 text-lg font-semibold text-text">{addon.title}</h3>
