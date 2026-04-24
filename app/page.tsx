@@ -38,6 +38,17 @@ function MotionSection({
   );
 }
 
+function GradientRing({ size = 48, className = "" }: { size?: number; className?: string }) {
+  return (
+    <div
+      style={{ width: size, height: size, padding: Math.max(2, Math.round(size * 0.04)) }}
+      className={`shrink-0 rounded-full bg-[conic-gradient(from_135deg,#00D4FF,#0066FF,#00F5A0,#8A2BFF,#FF00E0,#00D4FF)] ${className}`}
+    >
+      <div className="h-full w-full rounded-full bg-[#0F0F18]" />
+    </div>
+  );
+}
+
 function ServiceIcon({ children }: { children: React.ReactNode }) {
   return (
     <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/15 text-lg">
@@ -88,14 +99,7 @@ export default function Home() {
         <nav className="mx-auto w-full max-w-[1200px] px-7 py-[14px]">
           <div className="flex items-center justify-between">
             <a href="#top" className="flex shrink-0 flex-col items-center gap-1">
-              <Image
-                src="/assets/images/logo-icon.png"
-                alt="Peter Luke Digital"
-                width={48}
-                height={48}
-                className="h-12 w-12 object-contain"
-                priority
-              />
+              <GradientRing size={64} />
               <span className="text-[13px] font-bold tracking-[0.06em] text-text">Peter Luke Digital</span>
             </a>
             <div className="hidden items-center gap-7 text-sm text-muted md:flex">
@@ -397,7 +401,7 @@ export default function Home() {
                 <p className="text-sm font-semibold uppercase tracking-[0.14em] text-cyan">
                   Growth Plan
                 </p>
-                <Image src="/assets/images/logo-icon.png" alt="" width={96} height={96} className="h-24 w-24 object-contain opacity-90" />
+                <GradientRing size={120} />
               </div>
               <p className="mt-3 text-4xl font-bold tracking-[-0.02em] text-text">
                 $800/mo
@@ -491,7 +495,7 @@ export default function Home() {
                   className="rounded-2xl border border-[rgba(255,255,255,0.08)] bg-background p-[28px] transition-colors duration-200 hover:border-[rgba(255,255,255,0.14)]"
                 >
                   <div className="flex items-start justify-between">
-                    <Image src="/assets/images/logo-icon.png" alt="" width={36} height={36} className="h-9 w-9 object-contain" />
+                    <GradientRing size={36} />
                     <span className="text-xl font-bold tracking-[-0.02em] text-text">{addon.price}</span>
                   </div>
                   <h3 className="mt-4 text-lg font-semibold text-text">{addon.title}</h3>
@@ -610,7 +614,7 @@ export default function Home() {
           <div className="pointer-events-none absolute -right-[10%] bottom-[-20%] h-[90%] w-[60%] bg-[radial-gradient(ellipse,rgba(255,0,224,0.35),transparent_65%)] blur-[60px]" />
           <div className="mx-auto w-full max-w-[1200px] px-7 py-[120px] text-center">
             <div className="mb-8 flex justify-center">
-              <Image src="/assets/images/logo-icon.png" alt="" width={96} height={96} className="h-24 w-24 object-contain opacity-95" />
+              <GradientRing size={120} />
             </div>
             <h2 className="text-2xl font-bold text-text sm:text-4xl">
               Is your website losing you patients?
@@ -634,13 +638,7 @@ export default function Home() {
       <footer className="border-t border-[rgba(255,255,255,0.08)] bg-[#0F0F18]">
         <div className="mx-auto flex w-full max-w-[1200px] flex-col gap-3 px-7 py-8 text-sm text-muted">
           <div className="flex items-center gap-3">
-            <Image
-              src="/assets/images/logo-icon.png"
-              alt="Peter Luke Digital"
-              width={32}
-              height={32}
-              className="h-8 w-8 object-contain"
-            />
+            <GradientRing size={32} />
             <p className="font-semibold text-text">Peter Luke Digital</p>
           </div>
           <a href="mailto:peter@peterlukedigital.com" className="hover:text-text">
