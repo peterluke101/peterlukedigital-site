@@ -439,6 +439,82 @@ export default function Home() {
           </div>
         </MotionSection>
 
+        <MotionSection id="addons" className="relative overflow-hidden bg-surface scroll-mt-24">
+          <div className="pointer-events-none absolute right-[-5%] top-[-10%] h-[70%] w-[50%] bg-[radial-gradient(ellipse,rgba(138,43,255,0.25),transparent_65%)] blur-[60px]" />
+          <div className="mx-auto w-full max-w-[1200px] px-7 py-[110px]">
+            <h2 className="text-2xl font-bold text-text sm:text-3xl">
+              Also available.
+            </h2>
+            <p className="mt-3 text-[16px] text-muted">One-time projects. No subscription required.</p>
+            <div className="mt-8 grid gap-5 md:grid-cols-3">
+              {[
+                {
+                  icon: "✦",
+                  title: "Logo & Brand Identity",
+                  price: "$750",
+                  turnaround: "48–72 hour turnaround",
+                  outcomes: [
+                    "Custom logo (4 variations)",
+                    "Brand colors, typography & usage guide",
+                    "Print + digital files included",
+                  ],
+                },
+                {
+                  icon: "🪪",
+                  title: "Business Card Design",
+                  price: "$199",
+                  turnaround: "24 hour turnaround",
+                  outcomes: [
+                    "Front + back, print-ready files",
+                    "Matched to your existing brand",
+                    "Unlimited revisions",
+                  ],
+                },
+                {
+                  icon: "📐",
+                  title: "Social Media Starter Kit",
+                  price: "$299",
+                  turnaround: "48 hour turnaround",
+                  outcomes: [
+                    "Profile photo + cover image",
+                    "5 branded post templates",
+                    "Ready to use immediately",
+                  ],
+                },
+              ].map((addon) => (
+                <div
+                  key={addon.title}
+                  className="rounded-2xl border border-[rgba(255,255,255,0.08)] bg-background p-[28px] transition-colors duration-200 hover:border-[rgba(255,255,255,0.14)]"
+                >
+                  <div className="flex items-start justify-between">
+                    <span className="text-2xl">{addon.icon}</span>
+                    <span className="text-xl font-bold tracking-[-0.02em] text-text">{addon.price}</span>
+                  </div>
+                  <h3 className="mt-4 text-lg font-semibold text-text">{addon.title}</h3>
+                  <p className="mt-1 text-[12px] font-medium uppercase tracking-[0.1em] text-cyan">{addon.turnaround}</p>
+                  <ul className="mt-4 space-y-2 text-[13.5px] text-text-bright">
+                    {addon.outcomes.map((outcome) => (
+                      <li key={outcome} className="flex items-start gap-2">
+                        <span className="mt-2 h-[5px] w-[5px] rounded-full bg-purple" />
+                        <span>{outcome}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    href={calendlyLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={() => trackAuditCtaClick(`addon-${addon.title}`)}
+                    className="mt-6 inline-flex w-full items-center justify-center rounded-md border border-[rgba(255,255,255,0.12)] px-[18px] py-[11px] text-[14px] font-semibold text-text transition-colors duration-150 hover:border-[rgba(255,255,255,0.25)] hover:bg-surface-elevated"
+                  >
+                    Book a call
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </MotionSection>
+
         <MotionSection id="case-study" className="bg-background scroll-mt-24">
           <div className="mx-auto w-full max-w-[1200px] px-7 py-[110px] text-center">
             <h2 className="text-2xl font-bold text-text sm:text-3xl">
