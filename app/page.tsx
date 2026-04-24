@@ -393,9 +393,12 @@ export default function Home() {
               Simple, Transparent Pricing
             </h2>
             <div className="mt-8 max-w-2xl rounded-2xl border border-[rgba(255,255,255,0.08)] bg-surface-elevated p-[28px]">
-              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-cyan">
-                Growth Plan
-              </p>
+              <div className="flex items-start justify-between">
+                <p className="text-sm font-semibold uppercase tracking-[0.14em] text-cyan">
+                  Growth Plan
+                </p>
+                <Image src="/assets/images/logo-icon.png" alt="" width={96} height={96} className="h-24 w-24 object-contain opacity-90" />
+              </div>
               <p className="mt-3 text-4xl font-bold tracking-[-0.02em] text-text">
                 $800/mo
               </p>
