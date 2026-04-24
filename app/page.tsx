@@ -87,15 +87,16 @@ export default function Home() {
       <header className="sticky top-0 z-50 border-b border-[rgba(255,255,255,0.06)] bg-[rgba(11,11,18,0.7)] backdrop-blur-[20px] backdrop-saturate-[140%]">
         <nav className="mx-auto w-full max-w-[1200px] px-7 py-[14px]">
           <div className="flex items-center justify-between">
-            <a href="#top" className="relative block h-12 w-[200px] shrink-0">
+            <a href="#top" className="flex shrink-0 flex-col items-center gap-1">
               <Image
-                src="/assets/images/logo-primary.png"
+                src="/assets/images/logo-icon.png"
                 alt="Peter Luke Digital"
-                width={200}
+                width={48}
                 height={48}
-                className="h-12 w-auto object-contain object-left"
+                className="h-12 w-12 object-contain"
                 priority
               />
+              <span className="text-[11px] font-semibold tracking-[0.08em] text-text uppercase">Peter Luke Digital</span>
             </a>
             <div className="hidden items-center gap-7 text-sm text-muted md:flex">
               <a
