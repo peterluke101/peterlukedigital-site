@@ -396,53 +396,70 @@ export default function Home() {
             <h2 className="text-2xl font-bold text-text sm:text-3xl">
               Simple, Transparent Pricing
             </h2>
-            <div className="mt-6 max-w-2xl rounded-2xl md:mt-8 border border-[rgba(255,255,255,0.08)] bg-surface-elevated p-5 md:p-[28px]">
-              <div className="flex items-start justify-between">
-                <p className="text-sm font-semibold uppercase tracking-[0.14em] text-cyan">
-                  Growth Plan
+            <div className="mt-6 grid gap-6 md:mt-8 lg:grid-cols-[1fr_1fr] lg:gap-10 lg:items-start">
+              {/* Pricing card */}
+              <div className="rounded-2xl border border-[rgba(255,255,255,0.08)] bg-surface-elevated p-5 md:p-[28px]">
+                <div className="flex items-start justify-between">
+                  <p className="text-sm font-semibold uppercase tracking-[0.14em] text-cyan">
+                    Growth Plan
+                  </p>
+                  <GradientRing size={100} />
+                </div>
+                <p className="mt-3 text-4xl font-bold tracking-[-0.02em] text-text">
+                  $800/mo
                 </p>
-                <GradientRing size={120} />
+                <p className="mt-3 text-[15px] text-text-bright">
+                  6-month commitment. Website built free at the start.
+                </p>
+                <ul className="mt-6 space-y-2 text-[15px] text-text-bright">
+                  <li className="flex items-start gap-2">
+                    <span className="mt-2 h-[5px] w-[5px] rounded-full bg-cyan" />
+                    <span>Professional website — designed and launched at no upfront cost</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-2 h-[5px] w-[5px] rounded-full bg-cyan" />
+                    <span>2 SEO blog articles per month</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-2 h-[5px] w-[5px] rounded-full bg-cyan" />
+                    <span>30 social media posts per month across your platforms</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-2 h-[5px] w-[5px] rounded-full bg-cyan" />
+                    <span>Monthly performance report</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-2 h-[5px] w-[5px] rounded-full bg-cyan" />
+                    <span>After 6 months, the website is yours to keep — continue or walk away</span>
+                  </li>
+                </ul>
+                <p className="mt-6 text-sm text-muted">
+                  No long-term contracts beyond the initial 6 months. No fluff. Just a website built to grow.
+                </p>
+                <a
+                  href={calendlyLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() => trackAuditCtaClick("pricing")}
+                  className="mt-7 inline-flex rounded-md border border-transparent bg-primary px-[22px] py-[14px] text-[15px] font-bold tracking-[-0.01em] text-text shadow-[0_0_40px_-8px_rgba(0,102,255,0.45)] transition-all duration-[180ms] hover:bg-[#3385FF]"
+                >
+                  Get Your Free Website
+                </a>
               </div>
-              <p className="mt-3 text-4xl font-bold tracking-[-0.02em] text-text">
-                $800/mo
-              </p>
-              <p className="mt-3 text-[15px] text-text-bright">
-                6-month commitment. Website built free at the start.
-              </p>
-              <ul className="mt-6 space-y-2 text-[15px] text-text-bright">
-                <li className="flex items-start gap-2">
-                  <span className="mt-2 h-[5px] w-[5px] rounded-full bg-cyan" />
-                  <span>Professional website — designed and launched at no upfront cost</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-2 h-[5px] w-[5px] rounded-full bg-cyan" />
-                  <span>2 SEO blog articles per month</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-2 h-[5px] w-[5px] rounded-full bg-cyan" />
-                  <span>30 social media posts per month across your platforms</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-2 h-[5px] w-[5px] rounded-full bg-cyan" />
-                  <span>Monthly performance report</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-2 h-[5px] w-[5px] rounded-full bg-cyan" />
-                  <span>After 6 months, the website is yours to keep — continue or walk away</span>
-                </li>
-              </ul>
-              <p className="mt-6 text-sm text-muted">
-                No long-term contracts beyond the initial 6 months. No fluff. Just a website built to grow.
-              </p>
-              <a
-                href={calendlyLink}
-                target="_blank"
-                rel="noreferrer"
-                onClick={() => trackAuditCtaClick("pricing")}
-                className="mt-7 inline-flex rounded-md border border-transparent bg-primary px-[22px] py-[14px] text-[15px] font-bold tracking-[-0.01em] text-text shadow-[0_0_40px_-8px_rgba(0,102,255,0.45)] transition-all duration-[180ms] hover:bg-[#3385FF]"
-              >
-                Get Your Free Website
-              </a>
+              {/* Testimonial — desktop only beside pricing, mobile stacks below */}
+              <div className="flex flex-col justify-center gap-6">
+                <GradientRing size={64} />
+                <p className="text-[17px] leading-[1.7] text-muted italic">
+                  &ldquo;Pete put together a brand-new, aesthetically pleasing, and technically superior site for me in less than 72 hours. He made the desired changes within minutes, and the site was live and generating leads within a day.&rdquo;
+                </p>
+                <p className="text-[21px] font-bold leading-[1.5] text-text italic">
+                  &ldquo;I have never worked with any web firm that is this responsive, this fast, this proficient and this professional.&rdquo;
+                </p>
+                <div>
+                  <p className="font-semibold text-text">Dr. Paul Goodkin</p>
+                  <p className="text-[13px] text-muted">CEO, Juvenis Medical LLC</p>
+                </div>
+              </div>
             </div>
           </div>
         </MotionSection>
