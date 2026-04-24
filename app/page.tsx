@@ -85,64 +85,66 @@ export default function Home() {
   return (
     <div className="bg-background">
       <header className="sticky top-0 z-50 border-b border-[rgba(255,255,255,0.06)] bg-[rgba(11,11,18,0.7)] backdrop-blur-[20px] backdrop-saturate-[140%]">
-        <nav className="mx-auto flex w-full max-w-[1200px] flex-wrap items-center justify-between gap-3 px-7 py-[14px]">
-          <a href="#top" className="relative block h-12 w-[200px] shrink-0">
-            <Image
-              src="/assets/images/logo-primary.png"
-              alt="Peter Luke Digital"
-              width={200}
-              height={48}
-              className="h-12 w-auto object-contain object-left"
-              priority
-            />
-          </a>
-          <div className="hidden items-center gap-7 text-sm text-muted md:flex">
-            <a
-              href="#services"
-              onClick={() => trackSectionNavClick("services", "desktop")}
-              className="transition hover:text-text"
-            >
-              Services
+        <nav className="mx-auto w-full max-w-[1200px] px-7 py-[14px]">
+          <div className="flex items-center justify-between">
+            <a href="#top" className="relative block h-10 w-[160px] shrink-0">
+              <Image
+                src="/assets/images/logo-primary.png"
+                alt="Peter Luke Digital"
+                width={160}
+                height={40}
+                className="h-10 w-auto object-contain object-left"
+                priority
+              />
             </a>
+            <div className="hidden items-center gap-7 text-sm text-muted md:flex">
+              <a
+                href="#services"
+                onClick={() => trackSectionNavClick("services", "desktop")}
+                className="transition hover:text-text"
+              >
+                Services
+              </a>
+              <a
+                href="#how-it-works"
+                onClick={() => trackSectionNavClick("how-it-works", "desktop")}
+                className="transition hover:text-text"
+              >
+                How It Works
+              </a>
+              <a
+                href="#case-study"
+                onClick={() => trackSectionNavClick("case-study", "desktop")}
+                className="transition hover:text-text"
+              >
+                Case Study
+              </a>
+              <a
+                href="#who-we-help"
+                onClick={() => trackSectionNavClick("who-we-help", "desktop")}
+                className="transition hover:text-text"
+              >
+                Who We Help
+              </a>
+              <a
+                href="#about"
+                onClick={() => trackSectionNavClick("about", "desktop")}
+                className="transition hover:text-text"
+              >
+                About
+              </a>
+            </div>
             <a
-              href="#how-it-works"
-              onClick={() => trackSectionNavClick("how-it-works", "desktop")}
-              className="transition hover:text-text"
+              href={calendlyLink}
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => trackAuditCtaClick("nav")}
+              className="rounded-md bg-primary px-4 py-2 text-sm font-semibold text-text shadow-[0_0_40px_-8px_rgba(0,102,255,0.45)] transition hover:bg-[#3385FF]"
             >
-              How It Works
-            </a>
-            <a
-              href="#case-study"
-              onClick={() => trackSectionNavClick("case-study", "desktop")}
-              className="transition hover:text-text"
-            >
-              Case Study
-            </a>
-            <a
-              href="#who-we-help"
-              onClick={() => trackSectionNavClick("who-we-help", "desktop")}
-              className="transition hover:text-text"
-            >
-              Who We Help
-            </a>
-            <a
-              href="#about"
-              onClick={() => trackSectionNavClick("about", "desktop")}
-              className="transition hover:text-text"
-            >
-              About
+              Get Free Website
             </a>
           </div>
-          <a
-            href={calendlyLink}
-            target="_blank"
-            rel="noreferrer"
-            onClick={() => trackAuditCtaClick("nav")}
-            className="rounded-md bg-primary px-4 py-2 text-sm font-semibold text-text shadow-[0_0_40px_-8px_rgba(0,102,255,0.45)] transition hover:bg-[#3385FF]"
-          >
-            Get Free Website
-          </a>
-          <div className="grid w-full grid-cols-3 gap-x-4 gap-y-2 text-center text-xs text-muted md:hidden">
+          <div className="mt-2 grid w-full grid-cols-5 gap-x-2 gap-y-1 text-center text-[11px] text-muted md:hidden">
             <a
               href="#services"
               onClick={() => trackSectionNavClick("services", "mobile")}
@@ -239,7 +241,7 @@ export default function Home() {
                 days.
               </p>
             </div>
-            <div className="relative mx-auto flex aspect-square w-full max-w-[520px] items-center justify-center">
+            <div className="relative mx-auto hidden aspect-square w-full max-w-[520px] items-center justify-center lg:flex">
               <Image
                 src="/assets/images/logo-primary.png"
                 alt="Peter Luke Digital logo"
