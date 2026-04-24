@@ -586,7 +586,7 @@ export default function Home() {
           <div className="mx-auto grid w-full max-w-[1200px] gap-[56px] px-7 py-[110px] lg:grid-cols-[320px_1fr]">
             <div className="relative h-[320px] w-[320px] overflow-hidden rounded-[20px] border border-[rgba(255,255,255,0.08)] bg-surface">
               <Image
-                src="/assets/images/Headshot.PNG"
+                src="/assets/images/headshot-pete.jpg"
                 alt="Pete Luke headshot"
                 fill
                 sizes="(max-width: 1024px) 100vw, 240px"
