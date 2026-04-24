@@ -257,7 +257,8 @@ export default function Home() {
           First inbound lead for Juvenis Medical within 24 hours of launch
         </section>
 
-        <MotionSection id="problems" className="bg-surface scroll-mt-24">
+        <MotionSection id="problems" className="relative overflow-hidden bg-surface scroll-mt-24">
+          <div className="pointer-events-none absolute -right-[10%] bottom-[-20%] h-[70%] w-[55%] bg-[radial-gradient(ellipse,rgba(255,0,224,0.12),transparent_65%)] blur-[60px]" />
           <div className="mx-auto w-full max-w-[1200px] px-7 py-[110px]">
             <h2 className="max-w-3xl text-2xl font-bold text-text sm:text-3xl">
               If any of these sound familiar, your website is costing you
@@ -294,7 +295,9 @@ export default function Home() {
           </div>
         </MotionSection>
 
-        <MotionSection id="services" className="bg-background scroll-mt-24">
+        <MotionSection id="services" className="relative overflow-hidden bg-background scroll-mt-24">
+          <div className="pointer-events-none absolute -left-[10%] top-[-10%] h-[70%] w-[55%] bg-[radial-gradient(ellipse,rgba(0,212,255,0.13),transparent_65%)] blur-[60px]" />
+          <div className="pointer-events-none absolute right-[-5%] bottom-[-10%] h-[50%] w-[40%] bg-[radial-gradient(ellipse,rgba(138,43,255,0.1),transparent_65%)] blur-[50px]" />
           <div className="mx-auto w-full max-w-[1200px] px-7 py-[110px]">
             <h2 className="text-2xl font-bold text-text sm:text-3xl">
               What we do.
@@ -375,7 +378,8 @@ export default function Home() {
           </div>
         </MotionSection>
 
-        <MotionSection id="how-it-works" className="bg-surface scroll-mt-24">
+        <MotionSection id="how-it-works" className="relative overflow-hidden bg-surface scroll-mt-24">
+          <div className="pointer-events-none absolute left-[30%] top-[-20%] h-[80%] w-[50%] bg-[radial-gradient(ellipse,rgba(138,43,255,0.14),transparent_65%)] blur-[60px]" />
           <div className="mx-auto w-full max-w-[1200px] px-7 py-[110px]">
             <h2 className="text-2xl font-bold text-text sm:text-3xl">
               Simple process. Fast results.
@@ -402,7 +406,9 @@ export default function Home() {
           </div>
         </MotionSection>
 
-        <MotionSection id="pricing" className="bg-background scroll-mt-24">
+        <MotionSection id="pricing" className="relative overflow-hidden bg-background scroll-mt-24">
+          <div className="pointer-events-none absolute -right-[5%] top-[-10%] h-[80%] w-[55%] bg-[radial-gradient(ellipse,rgba(0,212,255,0.15),transparent_65%)] blur-[60px]" />
+          <div className="pointer-events-none absolute -left-[10%] bottom-[-20%] h-[60%] w-[45%] bg-[radial-gradient(ellipse,rgba(255,0,224,0.1),transparent_65%)] blur-[50px]" />
           <div className="mx-auto w-full max-w-[1200px] px-7 py-[110px]">
             <h2 className="text-2xl font-bold text-text sm:text-3xl">
               Simple, Transparent Pricing
@@ -475,7 +481,8 @@ export default function Home() {
           </div>
         </MotionSection>
 
-        <MotionSection id="who-we-help" className="bg-surface scroll-mt-24">
+        <MotionSection id="who-we-help" className="relative overflow-hidden bg-surface scroll-mt-24">
+          <div className="pointer-events-none absolute -left-[5%] top-[10%] h-[70%] w-[50%] bg-[radial-gradient(ellipse,rgba(0,212,255,0.11),transparent_65%)] blur-[60px]" />
           <div className="mx-auto w-full max-w-[1200px] px-7 py-[110px]">
             <h2 className="text-2xl font-bold text-text sm:text-3xl">
               Built specifically for medical and wellness practices.
@@ -503,7 +510,8 @@ export default function Home() {
           </div>
         </MotionSection>
 
-        <MotionSection id="about" className="bg-background scroll-mt-24">
+        <MotionSection id="about" className="relative overflow-hidden bg-background scroll-mt-24">
+          <div className="pointer-events-none absolute right-[-5%] top-[5%] h-[80%] w-[55%] bg-[radial-gradient(ellipse,rgba(138,43,255,0.13),transparent_65%)] blur-[60px]" />
           <div className="mx-auto grid w-full max-w-[1200px] gap-[56px] px-7 py-[110px] lg:grid-cols-[320px_1fr]">
             <div className="relative h-[320px] w-[320px] overflow-hidden rounded-[20px] border border-[rgba(255,255,255,0.08)] bg-surface">
               <Image
@@ -530,7 +538,9 @@ export default function Home() {
           </div>
         </MotionSection>
 
-        <MotionSection className="bg-background scroll-mt-24">
+        <MotionSection className="relative overflow-hidden bg-background scroll-mt-24">
+          <div className="pointer-events-none absolute -left-[10%] top-[-10%] h-[90%] w-[55%] bg-[radial-gradient(ellipse,rgba(0,212,255,0.2),transparent_60%)] blur-[60px]" />
+          <div className="pointer-events-none absolute -right-[10%] bottom-[-20%] h-[90%] w-[60%] bg-[radial-gradient(ellipse,rgba(255,0,224,0.18),transparent_65%)] blur-[60px]" />
           <div className="mx-auto w-full max-w-[1200px] px-7 py-[120px] text-center">
             <h2 className="text-2xl font-bold text-text sm:text-4xl">
               Is your website losing you patients?
