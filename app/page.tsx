@@ -453,6 +453,7 @@ export default function Home() {
                   title: "Logo & Brand Identity",
                   price: "$750",
                   turnaround: "48–72 hour turnaround",
+                  image: "/assets/images/PLD-Design-card-.png",
                   outcomes: [
                     "Custom logo (4 variations)",
                     "Brand colors, typography & usage guide",
@@ -484,31 +485,44 @@ export default function Home() {
               ].map((addon) => (
                 <div
                   key={addon.title}
-                  className="rounded-2xl border border-[rgba(255,255,255,0.08)] bg-background p-[28px] transition-colors duration-200 hover:border-[rgba(255,255,255,0.14)]"
+                  className="rounded-2xl border border-[rgba(255,255,255,0.08)] bg-background transition-colors duration-200 hover:border-[rgba(255,255,255,0.14)] overflow-hidden"
                 >
-                  <div className="flex items-start justify-between">
-                    <span className="text-2xl">{addon.icon}</span>
-                    <span className="text-xl font-bold tracking-[-0.02em] text-text">{addon.price}</span>
+                  {"image" in addon && addon.image && (
+                    <div className="relative w-full aspect-[16/9] overflow-hidden">
+                      <Image
+                        src={addon.image as string}
+                        alt={`${addon.title} example`}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover object-top"
+                      />
+                    </div>
+                  )}
+                  <div className="p-[28px]">
+                    <div className="flex items-start justify-between">
+                      <span className="text-2xl">{addon.icon}</span>
+                      <span className="text-xl font-bold tracking-[-0.02em] text-text">{addon.price}</span>
+                    </div>
+                    <h3 className="mt-4 text-lg font-semibold text-text">{addon.title}</h3>
+                    <p className="mt-1 text-[12px] font-medium uppercase tracking-[0.1em] text-cyan">{addon.turnaround}</p>
+                    <ul className="mt-4 space-y-2 text-[13.5px] text-text-bright">
+                      {addon.outcomes.map((outcome) => (
+                        <li key={outcome} className="flex items-start gap-2">
+                          <span className="mt-2 h-[5px] w-[5px] rounded-full bg-purple" />
+                          <span>{outcome}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <a
+                      href={calendlyLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      onClick={() => trackAuditCtaClick(`addon-${addon.title}`)}
+                      className="mt-6 inline-flex w-full items-center justify-center rounded-md border border-[rgba(255,255,255,0.12)] px-[18px] py-[11px] text-[14px] font-semibold text-text transition-colors duration-150 hover:border-[rgba(255,255,255,0.25)] hover:bg-surface-elevated"
+                    >
+                      Book a call
+                    </a>
                   </div>
-                  <h3 className="mt-4 text-lg font-semibold text-text">{addon.title}</h3>
-                  <p className="mt-1 text-[12px] font-medium uppercase tracking-[0.1em] text-cyan">{addon.turnaround}</p>
-                  <ul className="mt-4 space-y-2 text-[13.5px] text-text-bright">
-                    {addon.outcomes.map((outcome) => (
-                      <li key={outcome} className="flex items-start gap-2">
-                        <span className="mt-2 h-[5px] w-[5px] rounded-full bg-purple" />
-                        <span>{outcome}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href={calendlyLink}
-                    target="_blank"
-                    rel="noreferrer"
-                    onClick={() => trackAuditCtaClick(`addon-${addon.title}`)}
-                    className="mt-6 inline-flex w-full items-center justify-center rounded-md border border-[rgba(255,255,255,0.12)] px-[18px] py-[11px] text-[14px] font-semibold text-text transition-colors duration-150 hover:border-[rgba(255,255,255,0.25)] hover:bg-surface-elevated"
-                  >
-                    Book a call
-                  </a>
                 </div>
               ))}
             </div>
