@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--bg);font-family:var(--font-sans)}
+  .card{padding:24px;color:var(--text-primary);box-sizing:border-box}
+  .gradient-bar{height:80px;border-radius:12px;background:var(--pld-gradient-h);box-shadow:0 0 40px -8px rgba(138,43,255,0.35)}
+  .meta{display:flex;justify-content:space-between;margin-top:12px;font-size:11px;color:var(--text-muted);font-family:ui-monospace,Menlo,monospace}
+  .label{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px}
+  .stops{display:flex;margin-top:14px;gap:6px}
+  .stop{flex:1;height:6px;border-radius:3px}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="label">Signature Gradient · 45°</div>
+  <div class="gradient-bar"></div>
+  <div class="stops">
+    <div class="stop" style="background:#00D4FF"></div>
+    <div class="stop" style="background:#0066FF"></div>
+    <div class="stop" style="background:#00F5A0"></div>
+    <div class="stop" style="background:#8A2BFF"></div>
+    <div class="stop" style="background:#FF00E0"></div>
+  </div>
+  <div class="meta"><span>cyan 0%</span><span>blue 25%</span><span>green 50%</span><span>purple 75%</span><span>magenta 100%</span></div>
+</div>
+</body></html>

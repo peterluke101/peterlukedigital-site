@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--bg);font-family:var(--font-sans)}
+  .card{padding:24px;color:var(--text-primary);box-sizing:border-box}
+  .grid{display:grid;grid-template-columns:repeat(11,1fr);gap:6px}
+  .cell{aspect-ratio:1/1.5;border-radius:6px;border:1px solid var(--border);display:flex;align-items:flex-end;justify-content:center;padding:6px;font-size:10px;font-family:ui-monospace,Menlo,monospace}
+  .lo{color:#DCDCE6}
+  .hi{color:#0B0B12}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="grid">
+    <div class="cell lo" style="background:#0B0B12">0</div>
+    <div class="cell lo" style="background:#0F0F18">50</div>
+    <div class="cell lo" style="background:#14141F">100</div>
+    <div class="cell lo" style="background:#1C1C28">200</div>
+    <div class="cell lo" style="background:#262635">300</div>
+    <div class="cell lo" style="background:#3A3A4D">400</div>
+    <div class="cell lo" style="background:#5A5A73">500</div>
+    <div class="cell hi" style="background:#8A8AA3">600</div>
+    <div class="cell hi" style="background:#B4B4C8">700</div>
+    <div class="cell hi" style="background:#DCDCE6">800</div>
+    <div class="cell hi" style="background:#FFFFFF">900</div>
+  </div>
+</div>
+</body></html>

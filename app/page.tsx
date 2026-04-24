@@ -40,7 +40,7 @@ function MotionSection({
 
 function ServiceIcon({ children }: { children: React.ReactNode }) {
   return (
-    <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-lg">
+    <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/15 text-lg">
       {children}
     </span>
   );
@@ -83,31 +83,52 @@ function trackSectionNavClick(section: string, placement: "desktop" | "mobile") 
 
 export default function Home() {
   return (
-    <div className="bg-[#F8FAFC]">
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0A1628]/95 backdrop-blur">
-        <nav className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4 sm:px-6 lg:px-8">
-          <a href="#top" className="text-base font-semibold text-white sm:text-lg">
-            Peter Luke Digital
+    <div className="bg-background">
+      <header className="sticky top-0 z-50 border-b border-[rgba(255,255,255,0.06)] bg-[rgba(11,11,18,0.7)] backdrop-blur-[20px] backdrop-saturate-[140%]">
+        <nav className="mx-auto flex w-full max-w-[1200px] flex-wrap items-center justify-between gap-3 px-7 py-[14px]">
+          <a href="#top" className="relative block h-12 w-[200px] shrink-0">
+            <Image
+              src="/assets/images/logo-primary.png"
+              alt="Peter Luke Digital"
+              width={200}
+              height={48}
+              className="h-12 w-auto object-contain object-left"
+              priority
+            />
           </a>
-          <div className="hidden items-center gap-7 text-sm text-[#94A3B8] md:flex">
+          <div className="hidden items-center gap-7 text-sm text-muted md:flex">
             <a
               href="#services"
               onClick={() => trackSectionNavClick("services", "desktop")}
-              className="transition hover:text-white"
+              className="transition hover:text-text"
             >
               Services
             </a>
             <a
+              href="#how-it-works"
+              onClick={() => trackSectionNavClick("how-it-works", "desktop")}
+              className="transition hover:text-text"
+            >
+              How It Works
+            </a>
+            <a
               href="#case-study"
               onClick={() => trackSectionNavClick("case-study", "desktop")}
-              className="transition hover:text-white"
+              className="transition hover:text-text"
             >
               Case Study
             </a>
             <a
+              href="#who-we-help"
+              onClick={() => trackSectionNavClick("who-we-help", "desktop")}
+              className="transition hover:text-text"
+            >
+              Who We Help
+            </a>
+            <a
               href="#about"
               onClick={() => trackSectionNavClick("about", "desktop")}
-              className="transition hover:text-white"
+              className="transition hover:text-text"
             >
               About
             </a>
@@ -117,29 +138,43 @@ export default function Home() {
             target="_blank"
             rel="noreferrer"
             onClick={() => trackAuditCtaClick("nav")}
-            className="rounded-full bg-[#2563EB] px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-500"
+            className="rounded-md bg-primary px-4 py-2 text-sm font-semibold text-text shadow-[0_0_40px_-8px_rgba(0,102,255,0.45)] transition hover:bg-[#3385FF]"
           >
-            Book Free Audit
+            Get Free Website
           </a>
-          <div className="flex w-full items-center justify-center gap-5 text-xs text-[#94A3B8] md:hidden">
+          <div className="grid w-full grid-cols-3 gap-x-4 gap-y-2 text-center text-xs text-muted md:hidden">
             <a
               href="#services"
               onClick={() => trackSectionNavClick("services", "mobile")}
-              className="transition hover:text-white"
+              className="transition hover:text-text"
             >
               Services
             </a>
             <a
+              href="#how-it-works"
+              onClick={() => trackSectionNavClick("how-it-works", "mobile")}
+              className="transition hover:text-text"
+            >
+              How It Works
+            </a>
+            <a
               href="#case-study"
               onClick={() => trackSectionNavClick("case-study", "mobile")}
-              className="transition hover:text-white"
+              className="transition hover:text-text"
             >
               Case Study
             </a>
             <a
+              href="#who-we-help"
+              onClick={() => trackSectionNavClick("who-we-help", "mobile")}
+              className="transition hover:text-text"
+            >
+              Who We Help
+            </a>
+            <a
               href="#about"
               onClick={() => trackSectionNavClick("about", "mobile")}
-              className="transition hover:text-white"
+              className="transition hover:text-text"
             >
               About
             </a>
@@ -148,66 +183,86 @@ export default function Home() {
       </header>
 
       <main>
-        <section id="top" className="bg-[#0A1628] scroll-mt-24">
-          <div className="mx-auto w-full max-w-6xl px-4 pb-16 pt-16 sm:px-6 sm:pt-24 lg:px-8">
-            <motion.h1
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.55, ease: "easeOut" }}
-              className="max-w-4xl text-3xl font-bold leading-tight text-white sm:text-5xl"
-            >
-              We build websites that bring patients to medical and wellness
-              practices.
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.55, delay: 0.08, ease: "easeOut" }}
-              className="mt-6 max-w-3xl text-base leading-relaxed text-[#94A3B8] sm:text-lg"
-            >
-              Most clinic websites look outdated, rank nowhere on Google, and
-              lose patients before they ever call. We fix that - design, SEO,
-              and content included.
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.55, delay: 0.16, ease: "easeOut" }}
-              className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center"
-            >
-              <a
-                href={calendlyLink}
-                target="_blank"
-                rel="noreferrer"
-                onClick={() => trackAuditCtaClick("hero")}
-                className="inline-flex items-center justify-center rounded-full bg-[#2563EB] px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-500"
+        <section id="top" className="relative overflow-hidden bg-background scroll-mt-24">
+          <div className="pointer-events-none absolute -left-[10%] -top-[20%] h-[80%] w-[55%] bg-[radial-gradient(ellipse,rgba(0,212,255,0.35),transparent_60%)] blur-[40px]" />
+          <div className="pointer-events-none absolute -bottom-[30%] -right-[10%] h-[90%] w-[60%] bg-[radial-gradient(ellipse,rgba(138,43,255,0.3),transparent_65%)] blur-[40px]" />
+          <div className="relative z-[2] mx-auto grid w-full max-w-[1200px] items-center gap-12 px-7 pb-[120px] pt-[110px] lg:grid-cols-[1.1fr_1fr]">
+            <div>
+              <p className="mb-[18px] text-[12px] font-medium uppercase tracking-[0.14em] text-muted">
+                DIGITAL PARTNER FOR GROWING BUSINESSES
+              </p>
+              <motion.h1
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.55, ease: "easeOut" }}
+                className="max-w-4xl text-[clamp(42px,5.2vw,64px)] font-bold leading-[1.04] tracking-[-0.025em] text-text"
               >
-                Book a Free 20-Min Audit
-              </a>
-              <a
-                href="#case-study"
-                className="text-sm font-semibold text-[#94A3B8] underline-offset-4 transition hover:text-white hover:underline"
+                We build your website. You pay for the{" "}
+                <span className="bg-[linear-gradient(90deg,#00D4FF,#FF00E0)] bg-clip-text text-transparent">
+                  traffic.
+                </span>
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.55, delay: 0.08, ease: "easeOut" }}
+                className="mt-[22px] max-w-[560px] text-[18px] leading-[1.6] text-text-bright"
               >
-                See how we helped Juvenis Medical
-              </a>
-            </motion.div>
-            <p className="mt-8 text-sm text-[#94A3B8]">
-              No contracts. No fluff. First lead usually within 30 days.
-            </p>
+                We design, build, and grow websites that rank on Google,
+                convert visitors into customers, and run on autopilot. No
+                contracts. No fluff.
+              </motion.p>
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.55, delay: 0.16, ease: "easeOut" }}
+                className="mt-8 flex flex-col flex-wrap gap-[18px] sm:flex-row sm:items-center"
+              >
+                <a
+                  href={calendlyLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() => trackAuditCtaClick("hero")}
+                  className="inline-flex items-center justify-center rounded-md border border-transparent bg-primary px-[22px] py-[14px] text-[15px] font-bold tracking-[-0.01em] text-text shadow-[0_0_40px_-8px_rgba(0,102,255,0.45)] transition-all duration-[180ms] hover:bg-[#3385FF]"
+                >
+                  Get Your Free Website
+                </a>
+                <a
+                  href="#case-study"
+                  className="text-sm font-semibold text-muted transition duration-150 hover:text-text"
+                >
+                  See the Juvenis case study →
+                </a>
+              </motion.div>
+              <p className="mt-[26px] text-[13px] tracking-[0.01em] text-muted">
+                No contracts. No retainer lock-in. First lead usually within 30
+                days.
+              </p>
+            </div>
+            <div className="relative mx-auto flex aspect-square w-full max-w-[520px] items-center justify-center">
+              <Image
+                src="/assets/images/logo-primary.png"
+                alt="Peter Luke Digital logo"
+                width={520}
+                height={520}
+                className="h-auto w-[92%] object-contain"
+                priority
+              />
+            </div>
           </div>
         </section>
 
-        <section className="border-y border-white/10 bg-[#1E3A5F] px-4 py-3 text-center text-sm text-white sm:px-6">
+        <section className="border-y border-[rgba(255,255,255,0.08)] bg-[#0F0F18] px-7 py-[14px] text-center text-sm text-text">
           First inbound lead for Juvenis Medical within 24 hours of launch
         </section>
 
-        <MotionSection className="bg-[#F8FAFC] scroll-mt-24">
-          <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-            <h2 className="max-w-3xl text-2xl font-bold text-[#0A1628] sm:text-3xl">
+        <MotionSection id="problems" className="bg-surface scroll-mt-24">
+          <div className="mx-auto w-full max-w-[1200px] px-7 py-[110px]">
+            <h2 className="max-w-3xl text-2xl font-bold text-text sm:text-3xl">
               If any of these sound familiar, your website is costing you
               patients.
             </h2>
-            <div className="mt-8 grid gap-6 md:grid-cols-3">
+            <div className="mt-8 grid gap-5 md:grid-cols-3">
               {[
                 {
                   title: "We don't rank on Google",
@@ -224,12 +279,12 @@ export default function Home() {
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+                  className="rounded-2xl border border-[rgba(255,255,255,0.08)] bg-background p-[28px] transition-colors duration-200 hover:border-[rgba(255,255,255,0.14)]"
                 >
-                  <h3 className="text-lg font-semibold text-[#0A1628]">
+                  <h3 className="text-lg font-semibold text-text">
                     {item.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                  <p className="mt-3 text-[14px] leading-[1.65] text-text-bright">
                     {item.text}
                   </p>
                 </div>
@@ -238,12 +293,12 @@ export default function Home() {
           </div>
         </MotionSection>
 
-        <MotionSection id="services" className="bg-white scroll-mt-24">
-          <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-            <h2 className="text-2xl font-bold text-[#0A1628] sm:text-3xl">
+        <MotionSection id="services" className="bg-background scroll-mt-24">
+          <div className="mx-auto w-full max-w-[1200px] px-7 py-[110px]">
+            <h2 className="text-2xl font-bold text-text sm:text-3xl">
               What we do.
             </h2>
-            <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
               {[
                 {
                   icon: "🩺",
@@ -285,27 +340,30 @@ export default function Home() {
               ].map((service) => (
                 <div
                   key={service.title}
-                  className={`rounded-2xl border p-6 shadow-sm ${
+                  className={`relative overflow-hidden rounded-2xl border p-[28px] transition-colors duration-200 ${
                     service.featured
-                      ? "border-blue-200 bg-blue-50"
-                      : "border-slate-200 bg-white"
+                      ? "border-[rgba(255,255,255,0.08)] bg-surface-elevated"
+                      : "border-[rgba(255,255,255,0.08)] bg-surface-elevated hover:border-[rgba(255,255,255,0.14)]"
                   }`}
                 >
+                  {service.featured ? (
+                    <div className="absolute inset-x-0 top-0 h-[2px] bg-[linear-gradient(45deg,#00D4FF,#0066FF,#00F5A0,#8A2BFF,#FF00E0)]" />
+                  ) : null}
                   <div className="flex items-center justify-between">
                     <ServiceIcon>{service.icon}</ServiceIcon>
                     {service.featured ? (
-                      <span className="rounded-full bg-[#2563EB] px-3 py-1 text-xs font-semibold text-white">
+                      <span className="rounded-full bg-[linear-gradient(45deg,#00D4FF,#8A2BFF,#FF00E0)] px-[9px] py-[5px] text-[10px] font-bold tracking-[0.1em] text-text uppercase">
                         Most Popular
                       </span>
                     ) : null}
                   </div>
-                  <h3 className="mt-4 text-lg font-semibold text-[#0A1628]">
+                  <h3 className="mt-4 text-lg font-semibold text-text">
                     {service.title}
                   </h3>
-                  <ul className="mt-4 space-y-2 text-sm text-slate-600">
+                  <ul className="mt-4 space-y-2 text-[13.5px] text-text-bright">
                     {service.outcomes.map((outcome) => (
                       <li key={outcome} className="flex items-start gap-2">
-                        <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#2563EB]" />
+                        <span className={`mt-2 h-[5px] w-[5px] rounded-full ${service.featured ? "bg-magenta" : "bg-cyan"}`} />
                         <span>{outcome}</span>
                       </li>
                     ))}
@@ -316,9 +374,9 @@ export default function Home() {
           </div>
         </MotionSection>
 
-        <MotionSection className="bg-[#F8FAFC] scroll-mt-24">
-          <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-            <h2 className="text-2xl font-bold text-[#0A1628] sm:text-3xl">
+        <MotionSection id="how-it-works" className="bg-surface scroll-mt-24">
+          <div className="mx-auto w-full max-w-[1200px] px-7 py-[110px]">
+            <h2 className="text-2xl font-bold text-text sm:text-3xl">
               Simple process. Fast results.
             </h2>
             <div className="mt-8 grid gap-6 md:grid-cols-3">
@@ -329,12 +387,12 @@ export default function Home() {
               ].map((step, index) => (
                 <div
                   key={step}
-                  className="rounded-2xl border border-slate-200 bg-white p-6"
+                  className="rounded-2xl border border-[rgba(255,255,255,0.08)] bg-surface-elevated p-[28px]"
                 >
-                  <p className="text-sm font-semibold text-[#2563EB]">
+                  <p className="text-[13px] font-bold tracking-[0.14em] text-cyan uppercase">
                     Step {index + 1}
                   </p>
-                  <h3 className="mt-2 text-lg font-semibold text-[#0A1628]">
+                  <h3 className="mt-2 text-lg font-semibold text-text">
                     {step}
                   </h3>
                 </div>
@@ -343,12 +401,59 @@ export default function Home() {
           </div>
         </MotionSection>
 
-        <MotionSection id="case-study" className="bg-white scroll-mt-24">
-          <div className="mx-auto w-full max-w-6xl px-4 py-16 text-center sm:px-6 lg:px-8 lg:py-20">
-            <h2 className="text-2xl font-bold text-[#0A1628] sm:text-3xl">
+        <MotionSection id="pricing" className="bg-background scroll-mt-24">
+          <div className="mx-auto w-full max-w-[1200px] px-7 py-[110px]">
+            <h2 className="text-2xl font-bold text-text sm:text-3xl">
+              Simple, Transparent Pricing
+            </h2>
+            <div className="mt-8 max-w-2xl rounded-2xl border border-[rgba(255,255,255,0.08)] bg-surface-elevated p-[28px]">
+              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-cyan">
+                Growth Plan
+              </p>
+              <p className="mt-3 text-4xl font-bold tracking-[-0.02em] text-text">
+                $800/mo
+              </p>
+              <ul className="mt-6 space-y-2 text-[15px] text-text-bright">
+                <li className="flex items-start gap-2">
+                  <span className="mt-2 h-[5px] w-[5px] rounded-full bg-cyan" />
+                  <span>Free website build</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-2 h-[5px] w-[5px] rounded-full bg-cyan" />
+                  <span>2 SEO blog posts/month</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-2 h-[5px] w-[5px] rounded-full bg-cyan" />
+                  <span>30 social media posts/month</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-2 h-[5px] w-[5px] rounded-full bg-cyan" />
+                  <span>Monthly performance report</span>
+                </li>
+              </ul>
+              <p className="mt-6 text-sm text-muted">
+                We build your site free. You pay for the content that drives
+                traffic.
+              </p>
+              <a
+                href={calendlyLink}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => trackAuditCtaClick("pricing")}
+                className="mt-7 inline-flex rounded-md border border-transparent bg-primary px-[22px] py-[14px] text-[15px] font-bold tracking-[-0.01em] text-text shadow-[0_0_40px_-8px_rgba(0,102,255,0.45)] transition-all duration-[180ms] hover:bg-[#3385FF]"
+              >
+                Get Your Free Website
+              </a>
+            </div>
+          </div>
+        </MotionSection>
+
+        <MotionSection id="case-study" className="bg-background scroll-mt-24">
+          <div className="mx-auto w-full max-w-[1200px] px-7 py-[110px] text-center">
+            <h2 className="text-2xl font-bold text-text sm:text-3xl">
               Real results for real practices.
             </h2>
-            <p className="mx-auto mt-4 max-w-xl text-slate-600">
+            <p className="mx-auto mt-4 max-w-xl text-muted">
               Case study coming soon.
             </p>
             <a
@@ -356,19 +461,19 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
               onClick={() => trackAuditCtaClick("case-study")}
-              className="mt-8 inline-flex rounded-full bg-[#2563EB] px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-500"
+              className="mt-8 inline-flex rounded-md border border-transparent bg-primary px-[22px] py-[14px] text-[15px] font-bold tracking-[-0.01em] text-text shadow-[0_0_40px_-8px_rgba(0,102,255,0.45)] transition-all duration-[180ms] hover:bg-[#3385FF]"
             >
               Book your free audit.
             </a>
           </div>
         </MotionSection>
 
-        <MotionSection className="bg-[#F8FAFC] scroll-mt-24">
-          <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-            <h2 className="text-2xl font-bold text-[#0A1628] sm:text-3xl">
+        <MotionSection id="who-we-help" className="bg-surface scroll-mt-24">
+          <div className="mx-auto w-full max-w-[1200px] px-7 py-[110px]">
+            <h2 className="text-2xl font-bold text-text sm:text-3xl">
               Built specifically for medical and wellness practices.
             </h2>
-            <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <ul className="mt-8 grid gap-[14px] sm:grid-cols-2 lg:grid-cols-3">
               {[
                 "Hormone/TRT clinics",
                 "Peptide therapy",
@@ -379,9 +484,9 @@ export default function Home() {
               ].map((item) => (
                 <li
                   key={item}
-                  className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white p-4 text-sm text-slate-700"
+                  className="flex items-center gap-3 rounded-[10px] border border-[rgba(255,255,255,0.08)] bg-surface-elevated p-[14px] text-[15px] text-muted"
                 >
-                  <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-blue-100 text-xs text-[#2563EB]">
+                  <span className="inline-flex h-[22px] w-[22px] items-center justify-center rounded-full border-[1.5px] border-[rgba(0,212,255,0.55)] text-[12px] text-cyan">
                     ✓
                   </span>
                   {item}
@@ -391,11 +496,11 @@ export default function Home() {
           </div>
         </MotionSection>
 
-        <MotionSection id="about" className="bg-white scroll-mt-24">
-          <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-16 sm:px-6 lg:grid-cols-[240px_1fr] lg:px-8 lg:py-20">
-            <div className="relative h-64 overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-sm sm:h-72 lg:h-56">
+        <MotionSection id="about" className="bg-background scroll-mt-24">
+          <div className="mx-auto grid w-full max-w-[1200px] gap-[56px] px-7 py-[110px] lg:grid-cols-[320px_1fr]">
+            <div className="relative h-[320px] w-[320px] overflow-hidden rounded-[20px] border border-[rgba(255,255,255,0.08)] bg-surface">
               <Image
-                src="/images/pete-selfie.png"
+                src="/assets/images/pete-selfie.png"
                 alt="Pete Luke headshot"
                 fill
                 sizes="(max-width: 1024px) 100vw, 240px"
@@ -404,10 +509,10 @@ export default function Home() {
               />
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-[#0A1628] sm:text-3xl">
+              <h2 className="text-2xl font-bold text-text sm:text-3xl">
                 You&apos;re working with a person, not an agency.
               </h2>
-              <p className="mt-4 max-w-3xl leading-relaxed text-slate-600">
+              <p className="mt-4 max-w-[560px] text-[16px] leading-[1.7] text-text-bright">
                 I&apos;m Pete Luke - I started Peter Luke Digital because I kept
                 seeing the same problem: medical practices with incredible
                 doctors and real results, completely invisible online. I
@@ -418,12 +523,12 @@ export default function Home() {
           </div>
         </MotionSection>
 
-        <MotionSection className="bg-[#0A1628] scroll-mt-24">
-          <div className="mx-auto w-full max-w-6xl px-4 py-16 text-center sm:px-6 lg:px-8 lg:py-20">
-            <h2 className="text-2xl font-bold text-white sm:text-4xl">
+        <MotionSection className="bg-background scroll-mt-24">
+          <div className="mx-auto w-full max-w-[1200px] px-7 py-[120px] text-center">
+            <h2 className="text-2xl font-bold text-text sm:text-4xl">
               Is your website losing you patients?
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-[#94A3B8]">
+            <p className="mx-auto mt-4 max-w-2xl text-muted">
               Find out in 20 minutes - free, no obligation.
             </p>
             <a
@@ -431,7 +536,7 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
               onClick={() => trackAuditCtaClick("final-cta")}
-              className="mt-8 inline-flex rounded-full bg-[#2563EB] px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-500"
+              className="mt-[34px] inline-flex rounded-md border border-transparent bg-primary px-[22px] py-[14px] text-[15px] font-bold tracking-[-0.01em] text-text shadow-[0_0_40px_-8px_rgba(0,102,255,0.45)] transition-all duration-[180ms] hover:bg-[#3385FF]"
             >
               Book Your Free Audit
             </a>
@@ -439,17 +544,17 @@ export default function Home() {
         </MotionSection>
       </main>
 
-      <footer className="bg-[#1E3A5F]">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-4 py-8 text-sm text-[#94A3B8] sm:px-6 lg:px-8">
-          <p className="font-semibold text-white">Peter Luke Digital</p>
-          <a href="mailto:peter@peterlukedigital.com" className="hover:text-white">
+      <footer className="border-t border-[rgba(255,255,255,0.08)] bg-[#0F0F18]">
+        <div className="mx-auto flex w-full max-w-[1200px] flex-col gap-3 px-7 py-8 text-sm text-muted">
+          <p className="font-semibold text-text">Peter Luke Digital</p>
+          <a href="mailto:peter@peterlukedigital.com" className="hover:text-text">
             peter@peterlukedigital.com
           </a>
           <a
             href="https://peterlukedigital.com"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-white"
+            className="hover:text-text"
           >
             peterlukedigital.com
           </a>

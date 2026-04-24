@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--bg);font-family:var(--font-sans);color:var(--text-primary)}
+  .card{padding:32px;box-sizing:border-box;display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+  .row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+  .btn{font-family:inherit;font-weight:700;font-size:15px;letter-spacing:-0.01em;border-radius:8px;padding:14px 22px;cursor:pointer;transition:all 160ms cubic-bezier(0.22,1,0.36,1);border:1px solid transparent}
+  .btn-primary{background:#0066FF;color:#fff}
+  .btn-primary:hover{background:#3385FF;box-shadow:0 0 40px -8px rgba(0,102,255,0.6)}
+  .btn-secondary{background:transparent;color:#fff;border-color:rgba(255,255,255,0.14)}
+  .btn-secondary:hover{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.24)}
+  .btn-ghost{background:transparent;color:var(--text-secondary);border-color:transparent}
+  .btn-ghost:hover{color:#fff}
+  .btn-sm{font-size:13px;padding:10px 16px}
+  .meta{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted)}
+  .arrow{margin-left:4px}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="meta">Primary CTA · #0066FF · 8px · Bold</div>
+  <div class="row">
+    <button class="btn btn-primary">Book a Free 20-Min Audit</button>
+    <button class="btn btn-secondary">See the case study</button>
+    <button class="btn btn-ghost">Learn more <span class="arrow">→</span></button>
+  </div>
+  <div class="meta" style="margin-top:10px">Small · same rules</div>
+  <div class="row">
+    <button class="btn btn-primary btn-sm">Book Audit</button>
+    <button class="btn btn-secondary btn-sm">Services</button>
+  </div>
+</div>
+</body></html>

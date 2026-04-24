@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--bg);font-family:var(--font-sans);color:var(--text-primary)}
+  .card{padding:24px;box-sizing:border-box;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .pld-card{background:#14141F;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden}
+  .pld-card.elev{background:#1C1C28}
+  .pld-card.featured::before{content:"";position:absolute;inset:0 0 auto 0;height:1.5px;background:linear-gradient(45deg,#00D4FF,#0066FF,#00F5A0,#8A2BFF,#FF00E0)}
+  .icon{width:36px;height:36px;border-radius:8px;background:rgba(0,212,255,0.1);border:1px solid rgba(0,212,255,0.25);display:flex;align-items:center;justify-content:center;color:#00D4FF;font-size:18px}
+  .ctitle{font-size:15px;font-weight:500}
+  .cdesc{font-size:12px;color:var(--text-secondary);line-height:1.5;margin:0}
+  .stat{font-size:36px;font-weight:700;letter-spacing:-0.02em;background:var(--pld-gradient-h);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .slbl{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted)}
+  .step{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#00D4FF}
+  .num{font-size:11px;color:var(--text-muted);font-family:ui-monospace,Menlo,monospace}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="pld-card elev featured">
+    <div class="icon">◎</div>
+    <div class="ctitle">Website Rebuild</div>
+    <p class="cdesc">Modern, conversion-focused design engineered for patient trust.</p>
+  </div>
+  <div class="pld-card elev">
+    <div class="slbl">First lead</div>
+    <div class="stat">24 hrs</div>
+    <p class="cdesc">From Juvenis Medical launch to first booked consult.</p>
+  </div>
+  <div class="pld-card elev">
+    <div class="step">Step 01</div>
+    <div class="ctitle">Free 20-min audit</div>
+    <p class="cdesc">We review your current site, SEO, and conversion gaps.</p>
+  </div>
+</div>
+</body></html>

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
-const inter = Inter({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-sans",
@@ -14,6 +14,11 @@ export const metadata: Metadata = {
   title: "Peter Luke Digital | Web Design for Medical Practices",
   description:
     "Peter Luke Digital builds high-converting websites for medical and wellness practices with design, SEO, and content included.",
+  icons: {
+    icon: "/assets/images/logo-icon.png",
+    shortcut: "/assets/images/logo-icon.png",
+    apple: "/assets/images/logo-icon.png",
+  },
   metadataBase: new URL("https://peterlukedigital.com"),
   alternates: {
     canonical: "/",
@@ -49,8 +54,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full scroll-smooth`}>
-      <body className="min-h-full bg-[#F8FAFC] text-slate-900 antialiased">
+    <html lang="en" className={`${spaceGrotesk.variable} h-full scroll-smooth`}>
+      <body className="min-h-full bg-background text-text antialiased">
         {gaMeasurementId ? (
           <>
             <Script

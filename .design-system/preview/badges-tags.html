@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--bg);font-family:var(--font-sans);color:var(--text-primary)}
+  .card{padding:26px;box-sizing:border-box;display:flex;flex-direction:column;gap:14px}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:500;padding:5px 10px;border-radius:999px;letter-spacing:0.02em}
+  .b-blue{background:rgba(0,102,255,0.12);color:#6BA3FF;border:1px solid rgba(0,102,255,0.3)}
+  .b-cyan{background:rgba(0,212,255,0.1);color:#6BE4FF;border:1px solid rgba(0,212,255,0.3)}
+  .b-green{background:rgba(0,245,160,0.1);color:#6BF2C0;border:1px solid rgba(0,245,160,0.3)}
+  .b-purple{background:rgba(138,43,255,0.12);color:#C49BFF;border:1px solid rgba(138,43,255,0.35)}
+  .b-magenta{background:rgba(255,0,224,0.1);color:#FF6BEC;border:1px solid rgba(255,0,224,0.3)}
+  .b-neutral{background:rgba(255,255,255,0.06);color:#DCDCE6;border:1px solid rgba(255,255,255,0.12)}
+  .b-grad{background:linear-gradient(45deg,#00D4FF,#0066FF,#00F5A0,#8A2BFF,#FF00E0);color:#fff;border:0;padding:6px 11px;font-weight:700}
+  .dot{width:6px;height:6px;border-radius:50%}
+  .lbl{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted)}
+  .tag{font-size:12px;color:var(--text-secondary);padding:6px 12px;border:1px solid rgba(255,255,255,0.1);border-radius:8px;background:#14141F}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="lbl">Badges</div>
+  <div class="row">
+    <span class="badge b-grad">Most Popular</span>
+    <span class="badge b-blue"><span class="dot" style="background:#0066FF"></span>Active</span>
+    <span class="badge b-green"><span class="dot" style="background:#00F5A0"></span>Live</span>
+    <span class="badge b-cyan">New</span>
+    <span class="badge b-purple">Featured</span>
+    <span class="badge b-magenta">Limited</span>
+    <span class="badge b-neutral">Draft</span>
+  </div>
+  <div class="lbl" style="margin-top:6px">Tags</div>
+  <div class="row">
+    <span class="tag">Hormone Therapy</span>
+    <span class="tag">TRT</span>
+    <span class="tag">Peptides</span>
+    <span class="tag">GLP-1</span>
+    <span class="tag">Longevity</span>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,267 @@
+/* ============================================================
+   Peter Luke Digital — Design Tokens
+   colors_and_type.css
+   ------------------------------------------------------------
+   Single source of truth for color + typography CSS variables.
+   Import this file in any HTML prototype, slide, or UI kit.
+   ============================================================ */
+
+/* ----------  Webfont (Neurial Grotesk substitute: Space Grotesk)  ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* ==========  BRAND CORE COLORS  ========== */
+  --pld-cyan:     #00D4FF;
+  --pld-blue:     #0066FF;
+  --pld-green:    #00F5A0;
+  --pld-purple:   #8A2BFF;
+  --pld-magenta:  #FF00E0;
+  --pld-white:    #FFFFFF;
+  --pld-black:    #0B0B12;   /* near-black background */
+
+  /* ==========  NEUTRAL SCALE (dark-first)  ========== */
+  /* built to read on #0B0B12 while maintaining precise contrast */
+  --pld-neutral-0:   #0B0B12;  /* base bg */
+  --pld-neutral-50:  #0F0F18;  /* surface low */
+  --pld-neutral-100: #14141F;  /* surface */
+  --pld-neutral-200: #1C1C28;  /* surface elevated */
+  --pld-neutral-300: #262635;  /* border strong */
+  --pld-neutral-400: #3A3A4D;  /* border */
+  --pld-neutral-500: #5A5A73;  /* muted */
+  --pld-neutral-600: #A6A6BD;  /* text muted (brightened from #8A8AA3 for legibility) */
+  --pld-neutral-700: #D4D4E0;  /* text secondary (brightened from #B4B4C8) */
+  --pld-neutral-800: #ECECF3;  /* text bright (brightened from #DCDCE6) */
+  --pld-neutral-900: #FFFFFF;  /* pure white */
+
+  /* ==========  SEMANTIC TOKENS  ========== */
+  --bg:               var(--pld-neutral-0);
+  --surface:          var(--pld-neutral-100);
+  --surface-elevated: var(--pld-neutral-200);
+  --border:           rgba(255, 255, 255, 0.08);
+  --border-strong:    rgba(255, 255, 255, 0.14);
+
+  --text-primary:     var(--pld-white);
+  --text-bright:      var(--pld-neutral-800);
+  --text-secondary:   var(--pld-neutral-700);
+  --text-muted:       var(--pld-neutral-600);
+
+  --cta:              var(--pld-blue);
+  --cta-hover:        #3385FF;
+  --cta-text:         var(--pld-white);
+
+  --success:          var(--pld-green);
+  --accent:           var(--pld-cyan);
+  --accent-2:         var(--pld-purple);
+
+  /* focus ring uses cyan for medical-precision feel */
+  --focus-ring:       color-mix(in srgb, var(--pld-cyan) 60%, transparent);
+
+  /* ==========  SIGNATURE GRADIENT (45°)  ========== */
+  --pld-gradient: linear-gradient(
+    45deg,
+    #00D4FF 0%,
+    #0066FF 25%,
+    #00F5A0 50%,
+    #8A2BFF 75%,
+    #FF00E0 100%
+  );
+
+  /* horizontal variant for thin bars / underlines */
+  --pld-gradient-h: linear-gradient(
+    90deg,
+    #00D4FF 0%,
+    #0066FF 25%,
+    #00F5A0 50%,
+    #8A2BFF 75%,
+    #FF00E0 100%
+  );
+
+  /* subtle radial used for hero glows */
+  --pld-glow-cyan:    radial-gradient(ellipse at center, rgba(0,212,255,0.35), transparent 60%);
+  --pld-glow-purple:  radial-gradient(ellipse at center, rgba(138,43,255,0.30), transparent 65%);
+
+  /* ==========  TYPOGRAPHY  ========== */
+  --font-sans: "Space Grotesk", "Neurial Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+
+  /* weights (mapped to the 5 brand weights) */
+  --fw-light:   300;
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-bold:    700;
+  --fw-black:   700;  /* Space Grotesk tops out at 700; use 700 for "Black" */
+
+  /* type scale — desktop */
+  --fs-h1:         64px;
+  --fs-h2:         44px;
+  --fs-h3:         28px;
+  --fs-h4:         20px;
+  --fs-body-lg:    18px;
+  --fs-body:       16px;
+  --fs-small:      14px;
+  --fs-label:      12px;
+  --fs-button:     15px;
+  --fs-caption:    12px;
+
+  --lh-tight:   1.05;
+  --lh-snug:    1.2;
+  --lh-normal:  1.5;
+  --lh-relaxed: 1.65;
+
+  --ls-tight:   -0.02em;
+  --ls-snug:    -0.01em;
+  --ls-normal:  0em;
+  --ls-wide:    0.04em;
+  --ls-caps:    0.12em;
+
+  /* ==========  SPACING (4-based)  ========== */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-8: 32px;
+  --s-10: 40px;
+  --s-12: 48px;
+  --s-16: 64px;
+  --s-20: 80px;
+  --s-24: 96px;
+  --s-32: 128px;
+
+  /* ==========  RADII  ========== */
+  --r-xs:  4px;
+  --r-sm:  6px;
+  --r-md:  8px;    /* buttons — brand rule */
+  --r-lg:  12px;
+  --r-xl:  16px;
+  --r-2xl: 24px;
+  --r-full: 9999px;
+
+  /* ==========  SHADOWS (restrained, dark-mode)  ========== */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.4);
+  --shadow-md: 0 8px 24px -8px rgba(0,0,0,0.6), 0 2px 6px rgba(0,0,0,0.4);
+  --shadow-lg: 0 24px 60px -20px rgba(0,0,0,0.8), 0 4px 12px rgba(0,0,0,0.4);
+
+  /* brand-aware glows — use sparingly */
+  --glow-blue:    0 0 40px -8px rgba(0,102,255,0.6);
+  --glow-cyan:    0 0 40px -8px rgba(0,212,255,0.55);
+  --glow-purple:  0 0 40px -8px rgba(138,43,255,0.55);
+
+  /* ==========  MOTION  ========== */
+  --ease-out:   cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast:   160ms;
+  --dur-mid:    240ms;
+  --dur-slow:   420ms;
+}
+
+/* ============================================================
+   SEMANTIC TYPE CLASSES
+   Use these on elements directly. They encode weight + size +
+   line-height + letter-spacing per the scale.
+   ============================================================ */
+
+.pld-h1 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-bold);
+  font-size: clamp(44px, 5.6vw, var(--fs-h1));
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  color: var(--text-primary);
+}
+
+.pld-h2 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-bold);
+  font-size: clamp(32px, 3.6vw, var(--fs-h2));
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-tight);
+  color: var(--text-primary);
+}
+
+.pld-h3 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-h3);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-snug);
+  color: var(--text-primary);
+}
+
+.pld-h4 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-h4);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-snug);
+  color: var(--text-primary);
+}
+
+.pld-body-lg {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-body-lg);
+  line-height: var(--lh-relaxed);
+  color: var(--text-secondary);
+}
+
+.pld-body {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-body);
+  line-height: var(--lh-relaxed);
+  color: var(--text-secondary);
+}
+
+.pld-small {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-small);
+  line-height: var(--lh-normal);
+  color: var(--text-secondary);
+}
+
+.pld-label {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-label);
+  line-height: 1;
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.pld-button {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-button);
+  line-height: 1;
+  letter-spacing: var(--ls-snug);
+}
+
+.pld-caption {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-caption);
+  line-height: var(--lh-normal);
+  color: var(--text-muted);
+}
+
+/* gradient text utility — brand signature */
+.pld-gradient-text {
+  background: var(--pld-gradient-h);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+          color: transparent;
+}
+
+/* base reset helpers */
+.pld-root {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}

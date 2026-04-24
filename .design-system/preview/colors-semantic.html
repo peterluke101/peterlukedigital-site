@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--bg);font-family:var(--font-sans)}
+  .card{padding:24px;color:var(--text-primary);box-sizing:border-box;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  .tok{border:1px solid var(--border);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:10px}
+  .chip{height:28px;border-radius:6px}
+  .name{font-size:11px;color:var(--text-primary);font-weight:500}
+  .hex{font-size:10px;color:var(--text-muted);font-family:ui-monospace,Menlo,monospace}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="tok"><div class="chip" style="background:#0B0B12;border:1px solid var(--border)"></div><div class="name">background</div><div class="hex">#0B0B12</div></div>
+  <div class="tok"><div class="chip" style="background:#14141F"></div><div class="name">surface</div><div class="hex">#14141F</div></div>
+  <div class="tok"><div class="chip" style="background:#1C1C28"></div><div class="name">surface-elevated</div><div class="hex">#1C1C28</div></div>
+  <div class="tok"><div class="chip" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14)"></div><div class="name">border</div><div class="hex">rgba(255,255,255,.08)</div></div>
+  <div class="tok"><div class="chip" style="background:#FFFFFF"></div><div class="name">text-primary</div><div class="hex">#FFFFFF</div></div>
+  <div class="tok"><div class="chip" style="background:#B4B4C8"></div><div class="name">text-secondary</div><div class="hex">#B4B4C8</div></div>
+  <div class="tok"><div class="chip" style="background:#8A8AA3"></div><div class="name">text-muted</div><div class="hex">#8A8AA3</div></div>
+  <div class="tok"><div class="chip" style="background:#0066FF"></div><div class="name">cta</div><div class="hex">#0066FF</div></div>
+  <div class="tok"><div class="chip" style="background:#3385FF"></div><div class="name">cta-hover</div><div class="hex">#3385FF</div></div>
+  <div class="tok"><div class="chip" style="background:#00F5A0"></div><div class="name">success</div><div class="hex">#00F5A0</div></div>
+  <div class="tok"><div class="chip" style="background:#00D4FF"></div><div class="name">accent</div><div class="hex">#00D4FF</div></div>
+  <div class="tok"><div class="chip" style="background:#8A2BFF"></div><div class="name">accent-2</div><div class="hex">#8A2BFF</div></div>
+</div>
+</body></html>

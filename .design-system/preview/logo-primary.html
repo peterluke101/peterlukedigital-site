@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--bg);font-family:var(--font-sans);color:var(--text-primary)}
+  .card{padding:28px;box-sizing:border-box;display:flex;gap:32px;align-items:center}
+  img{width:180px;height:180px;border-radius:14px;object-fit:contain;background:#000;padding:6px;box-sizing:border-box}
+  .info{flex:1;display:flex;flex-direction:column;gap:14px}
+  .lbl{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted)}
+  .row{display:flex;gap:18px;font-size:11px;color:var(--text-secondary);flex-wrap:wrap}
+  .rule{font-size:12px;color:var(--text-secondary);display:flex;gap:8px;align-items:center}
+  .chk{color:#00F5A0;font-size:13px}
+  .xx{color:#FF6B8A;font-size:13px}
+</style>
+</head>
+<body>
+<div class="card">
+  <img src="../assets/logo-primary.png" alt="PLD primary logo"/>
+  <div class="info">
+    <div class="lbl">Primary Logo</div>
+    <div class="row">
+      <span class="rule"><span class="chk">✓</span>Chrome PLD monogram inside gradient ring</span>
+      <span class="rule"><span class="chk">✓</span>Min. digital size 24px</span>
+    </div>
+    <div class="row">
+      <span class="rule"><span class="xx">✗</span>Don't stretch</span>
+      <span class="rule"><span class="xx">✗</span>Don't recolor</span>
+      <span class="rule"><span class="xx">✗</span>Don't add extra effects</span>
+    </div>
+  </div>
+</div>
+</body></html>
