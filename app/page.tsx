@@ -544,8 +544,11 @@ export default function Home() {
               <div className="flex items-start gap-4">
                 <GradientRing size={48} className="shrink-0 mt-1" />
                 <div>
-                  <p className="text-[18px] leading-[1.7] text-text-bright italic">
-                    &ldquo;Pete put together a brand-new, aesthetically pleasing, and technically superior site for me in less than 72 hours. We had a conversation about what I was looking for and within hours he was presenting me with rough outlines. He made the desired changes within minutes, and the site was live and generating leads/revenues within a day. I have never worked with any web firm that is this responsive, this fast, this proficient and this professional.&rdquo;
+                  <p className="text-[17px] leading-[1.7] text-muted italic">
+                    &ldquo;Pete put together a brand-new, aesthetically pleasing, and technically superior site for me in less than 72 hours. We had a conversation about what I was looking for and within hours he was presenting me with rough outlines. He made the desired changes within minutes, and the site was live and generating leads/revenues within a day.&rdquo;
+                  </p>
+                  <p className="mt-5 text-[22px] font-bold leading-[1.5] text-text italic">
+                    &ldquo;I have never worked with any web firm that is this responsive, this fast, this proficient and this professional.&rdquo;
                   </p>
                   <div className="mt-6 flex items-center gap-4">
                     <div>
