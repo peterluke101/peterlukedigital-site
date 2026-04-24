@@ -210,9 +210,9 @@ export default function Home() {
                 transition={{ duration: 0.55, delay: 0.08, ease: "easeOut" }}
                 className="mt-[22px] max-w-[560px] text-[18px] leading-[1.6] text-text-bright"
               >
-                We design, build, and grow websites that rank on Google,
-                convert visitors into customers, and run on autopilot. No
-                contracts. No fluff.
+                We design and launch your website at no upfront cost when you
+                commit to 6 months of content marketing at $800/month. After 6
+                months, the site is yours to keep.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 16 }}
@@ -237,8 +237,7 @@ export default function Home() {
                 </a>
               </motion.div>
               <p className="mt-[26px] text-[13px] tracking-[0.01em] text-muted">
-                No contracts. No retainer lock-in. First lead usually within 30
-                days.
+                No long-term contracts. No fluff. Just a website built to grow.
               </p>
             </div>
             <div className="relative mx-auto hidden aspect-square w-full max-w-[520px] items-center justify-center lg:flex">
@@ -415,27 +414,33 @@ export default function Home() {
               <p className="mt-3 text-4xl font-bold tracking-[-0.02em] text-text">
                 $800/mo
               </p>
+              <p className="mt-3 text-[15px] text-text-bright">
+                6-month commitment. Website built free at the start.
+              </p>
               <ul className="mt-6 space-y-2 text-[15px] text-text-bright">
                 <li className="flex items-start gap-2">
                   <span className="mt-2 h-[5px] w-[5px] rounded-full bg-cyan" />
-                  <span>Free website build</span>
+                  <span>Professional website — designed and launched at no upfront cost</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-2 h-[5px] w-[5px] rounded-full bg-cyan" />
-                  <span>2 SEO blog posts/month</span>
+                  <span>2 SEO blog articles per month</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-2 h-[5px] w-[5px] rounded-full bg-cyan" />
-                  <span>30 social media posts/month</span>
+                  <span>30 social media posts per month across your platforms</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-2 h-[5px] w-[5px] rounded-full bg-cyan" />
                   <span>Monthly performance report</span>
                 </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-2 h-[5px] w-[5px] rounded-full bg-cyan" />
+                  <span>After 6 months, the website is yours to keep — continue or walk away</span>
+                </li>
               </ul>
               <p className="mt-6 text-sm text-muted">
-                We build your site free. You pay for the content that drives
-                traffic.
+                No long-term contracts beyond the initial 6 months. No fluff. Just a website built to grow.
               </p>
               <a
                 href={calendlyLink}
