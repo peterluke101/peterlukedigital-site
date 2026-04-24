@@ -96,7 +96,7 @@ export default function Home() {
                 className="h-12 w-12 object-contain"
                 priority
               />
-              <span className="text-[11px] font-semibold tracking-[0.08em] text-text uppercase">Peter Luke Digital</span>
+              <span className="text-[13px] font-bold tracking-[0.06em] text-text">Peter Luke Digital</span>
             </a>
             <div className="hidden items-center gap-7 text-sm text-muted md:flex">
               <a
