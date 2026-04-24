@@ -199,9 +199,9 @@ export default function Home() {
                 transition={{ duration: 0.55, ease: "easeOut" }}
                 className="max-w-4xl text-[clamp(42px,5.2vw,64px)] font-bold leading-[1.04] tracking-[-0.025em] text-text"
               >
-                We build your website. You pay for the{" "}
+                We build your website for free. You invest in{" "}
                 <span className="bg-[linear-gradient(90deg,#00D4FF,#FF00E0)] bg-clip-text text-transparent">
-                  traffic.
+                  growth.
                 </span>
               </motion.h1>
               <motion.p
