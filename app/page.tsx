@@ -532,23 +532,43 @@ export default function Home() {
           </div>
         </MotionSection>
 
-        <MotionSection id="case-study" className="bg-background scroll-mt-24">
-          <div className="mx-auto w-full max-w-[1200px] px-7 py-[110px] text-center">
-            <h2 className="text-2xl font-bold text-text sm:text-3xl">
-              Real results for real practices.
+        <MotionSection id="case-study" className="relative overflow-hidden bg-background scroll-mt-24">
+          <div className="pointer-events-none absolute -left-[5%] top-[-10%] h-[70%] w-[50%] bg-[radial-gradient(ellipse,rgba(0,212,255,0.28),transparent_65%)] blur-[60px]" />
+          <div className="pointer-events-none absolute right-[-5%] bottom-[-10%] h-[60%] w-[45%] bg-[radial-gradient(ellipse,rgba(138,43,255,0.25),transparent_65%)] blur-[60px]" />
+          <div className="mx-auto w-full max-w-[1200px] px-7 py-[110px]">
+            <p className="text-[12px] font-medium uppercase tracking-[0.14em] text-muted">Client results</p>
+            <h2 className="mt-3 text-2xl font-bold text-text sm:text-3xl">
+              Real results. Real words.
             </h2>
-            <p className="mx-auto mt-4 max-w-xl text-muted">
-              Case study coming soon.
-            </p>
-            <a
-              href={calendlyLink}
-              target="_blank"
-              rel="noreferrer"
-              onClick={() => trackAuditCtaClick("case-study")}
-              className="mt-8 inline-flex rounded-md border border-transparent bg-primary px-[22px] py-[14px] text-[15px] font-bold tracking-[-0.01em] text-text shadow-[0_0_40px_-8px_rgba(0,102,255,0.45)] transition-all duration-[180ms] hover:bg-[#3385FF]"
-            >
-              Book your free audit.
-            </a>
+            <div className="mt-10 rounded-2xl border border-[rgba(255,255,255,0.08)] bg-surface-elevated p-[40px]">
+              <div className="flex items-start gap-4">
+                <GradientRing size={48} className="shrink-0 mt-1" />
+                <div>
+                  <p className="text-[18px] leading-[1.7] text-text-bright italic">
+                    &ldquo;Pete put together a brand-new, aesthetically pleasing, and technically superior site for me in less than 72 hours. We had a conversation about what I was looking for and within hours he was presenting me with rough outlines. He made the desired changes within minutes, and the site was live and generating leads/revenues within a day. I have never worked with any web firm that is this responsive, this fast, this proficient and this professional.&rdquo;
+                  </p>
+                  <div className="mt-6 flex items-center gap-4">
+                    <div>
+                      <p className="font-semibold text-text">Dr. Paul Goodkin</p>
+                      <p className="text-[13px] text-muted">CEO, Juvenis Medical LLC</p>
+                      <a href="https://peptidesandhormones.com" target="_blank" rel="noreferrer" className="mt-1 inline-block text-[12px] text-cyan hover:underline">peptidesandhormones.com</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-8 text-center">
+              <p className="text-muted text-[15px]">Site live and generating leads within 24 hours of launch.</p>
+              <a
+                href={calendlyLink}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => trackAuditCtaClick("case-study")}
+                className="mt-8 inline-flex rounded-md border border-transparent bg-primary px-[22px] py-[14px] text-[15px] font-bold tracking-[-0.01em] text-text shadow-[0_0_40px_-8px_rgba(0,102,255,0.45)] transition-all duration-[180ms] hover:bg-[#3385FF]"
+              >
+                Get your free website
+              </a>
+            </div>
           </div>
         </MotionSection>
 
