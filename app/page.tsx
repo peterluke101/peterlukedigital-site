@@ -523,7 +523,7 @@ export default function Home() {
             </div>
             <div className="mt-10 w-full overflow-hidden rounded-2xl border border-[rgba(255,255,255,0.08)]">
               <Image
-                src="/assets/images/PLD-Design-card-.png"
+                src="/assets/images/PLD-branding-guide.jpg"
                 alt="Brand identity example — Peter Luke Digital"
                 width={1200}
                 height={675}
