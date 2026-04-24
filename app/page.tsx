@@ -87,13 +87,13 @@ export default function Home() {
       <header className="sticky top-0 z-50 border-b border-[rgba(255,255,255,0.06)] bg-[rgba(11,11,18,0.7)] backdrop-blur-[20px] backdrop-saturate-[140%]">
         <nav className="mx-auto w-full max-w-[1200px] px-7 py-[14px]">
           <div className="flex items-center justify-between">
-            <a href="#top" className="relative block h-10 w-[220px] shrink-0">
+            <a href="#top" className="relative block h-12 w-[200px] shrink-0">
               <Image
-                src="/assets/images/logo-wordmark.png"
+                src="/assets/images/logo-primary.png"
                 alt="Peter Luke Digital"
-                width={220}
-                height={40}
-                className="h-10 w-auto object-contain object-left"
+                width={200}
+                height={48}
+                className="h-12 w-auto object-contain object-left"
                 priority
               />
             </a>
@@ -617,7 +617,16 @@ export default function Home() {
 
       <footer className="border-t border-[rgba(255,255,255,0.08)] bg-[#0F0F18]">
         <div className="mx-auto flex w-full max-w-[1200px] flex-col gap-3 px-7 py-8 text-sm text-muted">
-          <p className="font-semibold text-text">Peter Luke Digital</p>
+          <div className="flex items-center gap-3">
+            <Image
+              src="/assets/images/logo-icon.png"
+              alt="Peter Luke Digital"
+              width={32}
+              height={32}
+              className="h-8 w-8 object-contain"
+            />
+            <p className="font-semibold text-text">Peter Luke Digital</p>
+          </div>
           <a href="mailto:peter@peterlukedigital.com" className="hover:text-text">
             peter@peterlukedigital.com
           </a>
