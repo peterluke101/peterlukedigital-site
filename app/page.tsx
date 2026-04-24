@@ -300,74 +300,52 @@ export default function Home() {
           <div className="pointer-events-none absolute right-[-5%] bottom-[-10%] h-[50%] w-[40%] bg-[radial-gradient(ellipse,rgba(138,43,255,0.25),transparent_65%)] blur-[50px]" />
           <div className="mx-auto w-full max-w-[1200px] px-7 py-[110px]">
             <h2 className="text-2xl font-bold text-text sm:text-3xl">
-              What we do.
+              Everything included in your plan.
             </h2>
-            <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            <p className="mt-3 text-[16px] text-muted">One plan. Three pillars. Everything working together.</p>
+            <div className="mt-8 grid gap-5 md:grid-cols-3">
               {[
                 {
-                  icon: "🩺",
-                  title: "Website Redesign",
+                  icon: "🖥️",
+                  title: "Your Website — Built Free",
                   outcomes: [
-                    "Modern, trust-building design",
-                    "Mobile-first patient experience",
-                    "Clear conversion-focused layout",
+                    "Professional design tailored to your brand",
+                    "Mobile-first, fast-loading, SEO-ready",
+                    "Yours to keep after 6 months",
                   ],
                 },
                 {
-                  icon: "📍",
-                  title: "SEO & Local Visibility",
+                  icon: "✍️",
+                  title: "2 Blog Articles / Month",
                   outcomes: [
-                    "Better Google Maps visibility",
-                    "Service-page keyword targeting",
-                    "On-page SEO for patient intent",
+                    "SEO-optimized to rank on Google",
+                    "Written to answer what your customers search for",
+                    "Builds authority and drives organic traffic",
                   ],
                 },
                 {
                   icon: "📱",
-                  title: "Social Media Management",
+                  title: "30 Social Posts / Month",
                   outcomes: [
-                    "Consistent brand messaging",
-                    "Educational content planning",
-                    "More traffic from social channels",
+                    "Consistent presence across your platforms",
+                    "Content that educates and converts",
+                    "Keeps your brand top of mind",
                   ],
-                },
-                {
-                  icon: "🚀",
-                  title: "Full Growth Package",
-                  outcomes: [
-                    "Design, SEO, and content together",
-                    "Monthly strategy + performance checks",
-                    "End-to-end patient acquisition support",
-                  ],
-                  featured: true,
                 },
               ].map((service) => (
                 <div
                   key={service.title}
-                  className={`relative overflow-hidden rounded-2xl border p-[28px] transition-colors duration-200 ${
-                    service.featured
-                      ? "border-[rgba(255,255,255,0.08)] bg-surface-elevated"
-                      : "border-[rgba(255,255,255,0.08)] bg-surface-elevated hover:border-[rgba(255,255,255,0.14)]"
-                  }`}
+                  className="relative overflow-hidden rounded-2xl border border-[rgba(255,255,255,0.08)] bg-surface-elevated p-[28px] transition-colors duration-200 hover:border-[rgba(255,255,255,0.14)]"
                 >
-                  {service.featured ? (
-                    <div className="absolute inset-x-0 top-0 h-[2px] bg-[linear-gradient(45deg,#00D4FF,#0066FF,#00F5A0,#8A2BFF,#FF00E0)]" />
-                  ) : null}
-                  <div className="flex items-center justify-between">
-                    <ServiceIcon>{service.icon}</ServiceIcon>
-                    {service.featured ? (
-                      <span className="rounded-full bg-[linear-gradient(45deg,#00D4FF,#8A2BFF,#FF00E0)] px-[9px] py-[5px] text-[10px] font-bold tracking-[0.1em] text-text uppercase">
-                        Most Popular
-                      </span>
-                    ) : null}
-                  </div>
+                  <div className="absolute inset-x-0 top-0 h-[2px] bg-[linear-gradient(45deg,#00D4FF,#0066FF,#00F5A0,#8A2BFF,#FF00E0)]" />
+                  <ServiceIcon>{service.icon}</ServiceIcon>
                   <h3 className="mt-4 text-lg font-semibold text-text">
                     {service.title}
                   </h3>
                   <ul className="mt-4 space-y-2 text-[13.5px] text-text-bright">
                     {service.outcomes.map((outcome) => (
                       <li key={outcome} className="flex items-start gap-2">
-                        <span className={`mt-2 h-[5px] w-[5px] rounded-full ${service.featured ? "bg-magenta" : "bg-cyan"}`} />
+                        <span className="mt-2 h-[5px] w-[5px] rounded-full bg-cyan" />
                         <span>{outcome}</span>
                       </li>
                     ))}
