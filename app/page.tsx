@@ -193,7 +193,7 @@ export default function Home() {
         <section id="top" className="relative overflow-hidden bg-background scroll-mt-24">
           <div className="pointer-events-none absolute -left-[10%] -top-[20%] h-[80%] w-[55%] bg-[radial-gradient(ellipse,rgba(0,212,255,0.35),transparent_60%)] blur-[40px]" />
           <div className="pointer-events-none absolute -bottom-[30%] -right-[10%] h-[90%] w-[60%] bg-[radial-gradient(ellipse,rgba(138,43,255,0.3),transparent_65%)] blur-[40px]" />
-          <div className="relative z-[2] mx-auto grid w-full max-w-[1200px] items-center gap-12 px-7 pb-[120px] pt-[110px] lg:grid-cols-[1.1fr_1fr]">
+          <div className="relative z-[2] mx-auto grid w-full max-w-[1200px] items-center gap-12 px-5 pb-14 pt-10 md:px-7 md:pb-[120px] md:pt-[110px] lg:grid-cols-[1.1fr_1fr]">
             <div>
               <p className="mb-[18px] text-[12px] font-medium uppercase tracking-[0.14em] text-muted">
                 DIGITAL PARTNER FOR GROWING BUSINESSES
@@ -202,7 +202,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.55, ease: "easeOut" }}
-                className="max-w-4xl text-[clamp(42px,5.2vw,64px)] font-bold leading-[1.04] tracking-[-0.025em] text-text"
+                className="max-w-4xl text-[clamp(32px,8vw,64px)] md:text-[clamp(42px,5.2vw,64px)] font-bold leading-[1.04] tracking-[-0.025em] text-text"
               >
                 We build your website for free. You invest in{" "}
                 <span className="bg-[linear-gradient(90deg,#00D4FF,#FF00E0)] bg-clip-text text-transparent">
@@ -213,7 +213,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.55, delay: 0.08, ease: "easeOut" }}
-                className="mt-[22px] max-w-[560px] text-[18px] leading-[1.6] text-text-bright"
+                className="mt-4 max-w-[560px] text-[16px] md:mt-[22px] md:text-[18px] leading-[1.6] text-text-bright"
               >
                 We design and launch your website at no upfront cost when you
                 commit to 6 months of content marketing at $800/month. After 6
@@ -223,7 +223,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.55, delay: 0.16, ease: "easeOut" }}
-                className="mt-8 flex flex-col flex-wrap gap-[18px] sm:flex-row sm:items-center"
+                className="mt-6 flex flex-col flex-wrap gap-[14px] md:mt-8 md:gap-[18px] sm:flex-row sm:items-center"
               >
                 <a
                   href={calendlyLink}
@@ -241,7 +241,7 @@ export default function Home() {
                   See the Juvenis case study →
                 </a>
               </motion.div>
-              <p className="mt-[26px] text-[13px] tracking-[0.01em] text-muted">
+              <p className="mt-4 text-[13px] md:mt-[26px] tracking-[0.01em] text-muted">
                 No long-term contracts. No fluff. Just a website built to grow.
               </p>
             </div>
@@ -264,12 +264,12 @@ export default function Home() {
 
         <MotionSection id="problems" className="relative overflow-hidden bg-surface scroll-mt-24">
           <div className="pointer-events-none absolute -right-[10%] bottom-[-20%] h-[70%] w-[55%] bg-[radial-gradient(ellipse,rgba(255,0,224,0.28),transparent_65%)] blur-[60px]" />
-          <div className="mx-auto w-full max-w-[1200px] px-7 py-[110px]">
+          <div className="mx-auto w-full max-w-[1200px] px-5 py-14 md:px-7 md:py-[110px]">
             <h2 className="max-w-3xl text-2xl font-bold text-text sm:text-3xl">
               If any of these sound familiar, your website is costing you
               patients.
             </h2>
-            <div className="mt-8 grid gap-5 md:grid-cols-3">
+            <div className="mt-6 grid gap-4 md:mt-8 md:gap-5 md:grid-cols-3">
               {[
                 {
                   title: "We don't rank on Google",
@@ -286,7 +286,7 @@ export default function Home() {
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="rounded-2xl border border-[rgba(255,255,255,0.08)] bg-background p-[28px] transition-colors duration-200 hover:border-[rgba(255,255,255,0.14)]"
+                  className="rounded-2xl border border-[rgba(255,255,255,0.08)] bg-background p-5 md:p-[28px] transition-colors duration-200 hover:border-[rgba(255,255,255,0.14)]"
                 >
                   <h3 className="text-lg font-semibold text-text">
                     {item.title}
@@ -303,12 +303,12 @@ export default function Home() {
         <MotionSection id="services" className="relative overflow-hidden bg-background scroll-mt-24">
           <div className="pointer-events-none absolute -left-[10%] top-[-10%] h-[70%] w-[55%] bg-[radial-gradient(ellipse,rgba(0,212,255,0.30),transparent_65%)] blur-[60px]" />
           <div className="pointer-events-none absolute right-[-5%] bottom-[-10%] h-[50%] w-[40%] bg-[radial-gradient(ellipse,rgba(138,43,255,0.25),transparent_65%)] blur-[50px]" />
-          <div className="mx-auto w-full max-w-[1200px] px-7 py-[110px]">
+          <div className="mx-auto w-full max-w-[1200px] px-5 py-14 md:px-7 md:py-[110px]">
             <h2 className="text-2xl font-bold text-text sm:text-3xl">
               Everything included in your plan.
             </h2>
-            <p className="mt-3 text-[16px] text-muted">One plan. Three pillars. Everything working together.</p>
-            <div className="mt-8 grid gap-5 md:grid-cols-3">
+            <p className="mt-2 text-[15px] text-muted md:mt-3 md:text-[16px]">One plan. Three pillars. Everything working together.</p>
+            <div className="mt-6 grid gap-4 md:mt-8 md:gap-5 md:grid-cols-3">
               {[
                 {
                   icon: "🖥️",
@@ -340,7 +340,7 @@ export default function Home() {
               ].map((service) => (
                 <div
                   key={service.title}
-                  className="relative overflow-hidden rounded-2xl border border-[rgba(255,255,255,0.08)] bg-surface-elevated p-[28px] transition-colors duration-200 hover:border-[rgba(255,255,255,0.14)]"
+                  className="relative overflow-hidden rounded-2xl border border-[rgba(255,255,255,0.08)] bg-surface-elevated p-5 md:p-[28px] transition-colors duration-200 hover:border-[rgba(255,255,255,0.14)]"
                 >
                   <div className="absolute inset-x-0 top-0 h-[2px] bg-[linear-gradient(45deg,#00D4FF,#0066FF,#00F5A0,#8A2BFF,#FF00E0)]" />
                   <ServiceIcon>{service.icon}</ServiceIcon>
@@ -363,11 +363,11 @@ export default function Home() {
 
         <MotionSection id="how-it-works" className="relative overflow-hidden bg-surface scroll-mt-24">
           <div className="pointer-events-none absolute left-[30%] top-[-20%] h-[80%] w-[50%] bg-[radial-gradient(ellipse,rgba(138,43,255,0.30),transparent_65%)] blur-[60px]" />
-          <div className="mx-auto w-full max-w-[1200px] px-7 py-[110px]">
+          <div className="mx-auto w-full max-w-[1200px] px-5 py-14 md:px-7 md:py-[110px]">
             <h2 className="text-2xl font-bold text-text sm:text-3xl">
               Simple process. Fast results.
             </h2>
-            <div className="mt-8 grid gap-6 md:grid-cols-3">
+            <div className="mt-6 grid gap-4 md:mt-8 md:gap-6 md:grid-cols-3">
               {[
                 "Free Audit 20 min",
                 "We Build & Optimize",
@@ -375,7 +375,7 @@ export default function Home() {
               ].map((step, index) => (
                 <div
                   key={step}
-                  className="rounded-2xl border border-[rgba(255,255,255,0.08)] bg-surface-elevated p-[28px]"
+                  className="rounded-2xl border border-[rgba(255,255,255,0.08)] bg-surface-elevated p-5 md:p-[28px]"
                 >
                   <p className="text-[13px] font-bold tracking-[0.14em] text-cyan uppercase">
                     Step {index + 1}
@@ -392,11 +392,11 @@ export default function Home() {
         <MotionSection id="pricing" className="relative overflow-hidden bg-background scroll-mt-24">
           <div className="pointer-events-none absolute -right-[5%] top-[-10%] h-[80%] w-[55%] bg-[radial-gradient(ellipse,rgba(0,212,255,0.32),transparent_65%)] blur-[60px]" />
           <div className="pointer-events-none absolute -left-[10%] bottom-[-20%] h-[60%] w-[45%] bg-[radial-gradient(ellipse,rgba(255,0,224,0.25),transparent_65%)] blur-[50px]" />
-          <div className="mx-auto w-full max-w-[1200px] px-7 py-[110px]">
+          <div className="mx-auto w-full max-w-[1200px] px-5 py-14 md:px-7 md:py-[110px]">
             <h2 className="text-2xl font-bold text-text sm:text-3xl">
               Simple, Transparent Pricing
             </h2>
-            <div className="mt-8 max-w-2xl rounded-2xl border border-[rgba(255,255,255,0.08)] bg-surface-elevated p-[28px]">
+            <div className="mt-6 max-w-2xl rounded-2xl md:mt-8 border border-[rgba(255,255,255,0.08)] bg-surface-elevated p-5 md:p-[28px]">
               <div className="flex items-start justify-between">
                 <p className="text-sm font-semibold uppercase tracking-[0.14em] text-cyan">
                   Growth Plan
@@ -449,12 +449,12 @@ export default function Home() {
 
         <MotionSection id="addons" className="relative overflow-hidden bg-surface scroll-mt-24">
           <div className="pointer-events-none absolute right-[-5%] top-[-10%] h-[70%] w-[50%] bg-[radial-gradient(ellipse,rgba(138,43,255,0.25),transparent_65%)] blur-[60px]" />
-          <div className="mx-auto w-full max-w-[1200px] px-7 py-[110px]">
+          <div className="mx-auto w-full max-w-[1200px] px-5 py-14 md:px-7 md:py-[110px]">
             <h2 className="text-2xl font-bold text-text sm:text-3xl">
               Also available.
             </h2>
-            <p className="mt-3 text-[16px] text-muted">One-time projects. No subscription required.</p>
-            <div className="mt-8 grid gap-5 md:grid-cols-3">
+            <p className="mt-2 text-[15px] text-muted md:mt-3 md:text-[16px]">One-time projects. No subscription required.</p>
+            <div className="mt-6 grid gap-4 md:mt-8 md:gap-5 md:grid-cols-3">
               {[
                 {
                   icon: "✦",
@@ -492,7 +492,7 @@ export default function Home() {
               ].map((addon) => (
                 <div
                   key={addon.title}
-                  className="rounded-2xl border border-[rgba(255,255,255,0.08)] bg-background p-[28px] transition-colors duration-200 hover:border-[rgba(255,255,255,0.14)]"
+                  className="rounded-2xl border border-[rgba(255,255,255,0.08)] bg-background p-5 md:p-[28px] transition-colors duration-200 hover:border-[rgba(255,255,255,0.14)]"
                 >
                   <div className="flex items-start justify-between">
                     <GradientRing size={36} />
@@ -520,7 +520,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <div className="mt-10 w-full overflow-hidden rounded-2xl border border-[rgba(255,255,255,0.08)]">
+            <div className="mt-6 w-full overflow-hidden md:mt-6 rounded-2xl border md:mt-10 border-[rgba(255,255,255,0.08)]">
               <Image
                 src="/assets/images/PLD-branding-guide.jpg"
                 alt="Brand identity example — Peter Luke Digital"
@@ -535,19 +535,19 @@ export default function Home() {
         <MotionSection id="case-study" className="relative overflow-hidden bg-background scroll-mt-24">
           <div className="pointer-events-none absolute -left-[5%] top-[-10%] h-[70%] w-[50%] bg-[radial-gradient(ellipse,rgba(0,212,255,0.28),transparent_65%)] blur-[60px]" />
           <div className="pointer-events-none absolute right-[-5%] bottom-[-10%] h-[60%] w-[45%] bg-[radial-gradient(ellipse,rgba(138,43,255,0.25),transparent_65%)] blur-[60px]" />
-          <div className="mx-auto w-full max-w-[1200px] px-7 py-[110px]">
+          <div className="mx-auto w-full max-w-[1200px] px-5 py-14 md:px-7 md:py-[110px]">
             <p className="text-[12px] font-medium uppercase tracking-[0.14em] text-muted">Client results</p>
             <h2 className="mt-3 text-2xl font-bold text-text sm:text-3xl">
               Real results. Real words.
             </h2>
-            <div className="mt-10 rounded-2xl border border-[rgba(255,255,255,0.08)] bg-surface-elevated p-[40px]">
+            <div className="mt-6 rounded-2xl border md:mt-10 border-[rgba(255,255,255,0.08)] bg-surface-elevated p-6 md:p-[40px]">
               <div className="flex items-start gap-4">
                 <GradientRing size={48} className="shrink-0 mt-1" />
                 <div>
                   <p className="text-[17px] leading-[1.7] text-muted italic">
                     &ldquo;Pete put together a brand-new, aesthetically pleasing, and technically superior site for me in less than 72 hours. We had a conversation about what I was looking for and within hours he was presenting me with rough outlines. He made the desired changes within minutes, and the site was live and generating leads/revenues within a day.&rdquo;
                   </p>
-                  <p className="mt-5 text-[22px] font-bold leading-[1.5] text-text italic">
+                  <p className="mt-4 text-[18px] font-bold leading-[1.5] md:text-[22px] text-text italic">
                     &ldquo;I have never worked with any web firm that is this responsive, this fast, this proficient and this professional.&rdquo;
                   </p>
                   <div className="mt-6 flex items-center gap-4">
@@ -577,7 +577,7 @@ export default function Home() {
 
         <MotionSection id="who-we-help" className="relative overflow-hidden bg-surface scroll-mt-24">
           <div className="pointer-events-none absolute -left-[5%] top-[10%] h-[70%] w-[50%] bg-[radial-gradient(ellipse,rgba(0,212,255,0.28),transparent_65%)] blur-[60px]" />
-          <div className="mx-auto w-full max-w-[1200px] px-7 py-[110px]">
+          <div className="mx-auto w-full max-w-[1200px] px-5 py-14 md:px-7 md:py-[110px]">
             <h2 className="text-2xl font-bold text-text sm:text-3xl">
               Built specifically for medical and wellness practices.
             </h2>
@@ -606,8 +606,8 @@ export default function Home() {
 
         <MotionSection id="about" className="relative overflow-hidden bg-background scroll-mt-24">
           <div className="pointer-events-none absolute right-[-5%] top-[5%] h-[80%] w-[55%] bg-[radial-gradient(ellipse,rgba(138,43,255,0.28),transparent_65%)] blur-[60px]" />
-          <div className="mx-auto grid w-full max-w-[1200px] gap-[56px] px-7 py-[110px] lg:grid-cols-[320px_1fr]">
-            <div className="relative h-[320px] w-[320px] overflow-hidden rounded-[20px] border border-[rgba(255,255,255,0.08)] bg-surface">
+          <div className="mx-auto grid w-full max-w-[1200px] gap-8 px-5 py-14 md:gap-[56px] md:px-7 md:py-[110px] lg:grid-cols-[320px_1fr]">
+            <div className="relative h-[260px] w-full max-w-[320px] md:h-[320px] md:w-[320px] overflow-hidden rounded-[20px] border border-[rgba(255,255,255,0.08)] bg-surface">
               <Image
                 src="/assets/images/headshot-pete.jpg"
                 alt="Pete Luke headshot"
@@ -635,8 +635,8 @@ export default function Home() {
         <MotionSection className="relative overflow-hidden bg-background scroll-mt-24">
           <div className="pointer-events-none absolute -left-[10%] top-[-10%] h-[90%] w-[55%] bg-[radial-gradient(ellipse,rgba(0,212,255,0.38),transparent_60%)] blur-[60px]" />
           <div className="pointer-events-none absolute -right-[10%] bottom-[-20%] h-[90%] w-[60%] bg-[radial-gradient(ellipse,rgba(255,0,224,0.35),transparent_65%)] blur-[60px]" />
-          <div className="mx-auto w-full max-w-[1200px] px-7 py-[120px] text-center">
-            <div className="mb-8 flex justify-center">
+          <div className="mx-auto w-full max-w-[1200px] px-5 py-14 md:px-7 md:py-[120px] text-center">
+            <div className="mb-5 flex justify-center md:mb-8">
               <GradientRing size={120} />
             </div>
             <h2 className="text-2xl font-bold text-text sm:text-4xl">
