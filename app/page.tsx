@@ -361,7 +361,7 @@ export default function Home() {
                   title: "Logo & Brand Identity",
                   price: "$750",
                   turnaround: "48–72 hour turnaround",
-                  outcomes: ["Custom logo (4 variations)", "Brand colors, typography & usage guide", "Print + digital files included"],
+                  outcomes: ["Custom logo (4 variations)", "Full brand guidelines sheet — colors, fonts & usage rules", "Individual print-ready files for merch, signage & ads"],
                 },
                 {
                   title: "Business Card Design",
@@ -403,14 +403,18 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <div className="mt-6 w-full overflow-hidden rounded-2xl border border-[rgba(255,255,255,0.08)]">
-              <Image
-                src="/assets/images/PLD-branding-guide.jpg"
-                alt="Brand identity example — Peter Luke Digital"
-                width={1200}
-                height={675}
-                className="w-full h-auto object-cover"
-              />
+            <div className="mt-10">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-muted">Your Brand Kit</p>
+              <p className="mt-1 text-[14px] leading-[1.6] text-text-bright">Every logo, color, and font delivered as individual print-ready files — use them for merch, signage, ads, or anything else, forever.</p>
+              <div className="mt-4 w-full overflow-hidden rounded-2xl border border-[rgba(255,255,255,0.08)]">
+                <Image
+                  src="/assets/images/PLD-branding-guide.jpg"
+                  alt="Brand identity example — Peter Luke Digital"
+                  width={1200}
+                  height={675}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
             </div>
           </div>
         </MotionSection>
