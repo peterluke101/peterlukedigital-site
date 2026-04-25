@@ -120,7 +120,7 @@ export default function CaseStudy() {
         <MotionDiv className="mt-10 grid gap-4 sm:grid-cols-2 md:mt-12">
           <div className="overflow-hidden rounded-2xl border border-[rgba(255,255,255,0.08)]">
             <div className="border-b border-[rgba(255,255,255,0.06)] bg-surface px-4 py-2">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-muted">Before — Homepage</p>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-muted">Before — Old Contact Page</p>
             </div>
             <img
               src="/assets/images/case-study/juvenis-before-1.jpg"
@@ -130,7 +130,7 @@ export default function CaseStudy() {
           </div>
           <div className="overflow-hidden rounded-2xl border border-[rgba(255,255,255,0.08)]">
             <div className="border-b border-[rgba(255,255,255,0.06)] bg-surface px-4 py-2">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-muted">Before — Site Section</p>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-muted">Before — Old Branding / Footer</p>
             </div>
             <img
               src="/assets/images/case-study/juvenis-before-2.jpg"
