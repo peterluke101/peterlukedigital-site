@@ -116,31 +116,7 @@ export default function CaseStudy() {
           </div>
         </MotionDiv>
 
-        {/* Before screenshots */}
-        <MotionDiv className="mt-10 grid gap-4 sm:grid-cols-2 md:mt-12">
-          <div className="overflow-hidden rounded-2xl border border-[rgba(255,255,255,0.08)]">
-            <div className="border-b border-[rgba(255,255,255,0.06)] bg-surface px-4 py-2">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-muted">Before — Old Contact Page</p>
-            </div>
-            <img
-              src="/assets/images/case-study/juvenis-before-1.jpg"
-              alt="Old Juvenis Medical website before redesign"
-              className="w-full h-auto"
-            />
-          </div>
-          <div className="overflow-hidden rounded-2xl border border-[rgba(255,255,255,0.08)]">
-            <div className="border-b border-[rgba(255,255,255,0.06)] bg-surface px-4 py-2">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-muted">Before — Old Branding / Footer</p>
-            </div>
-            <img
-              src="/assets/images/case-study/juvenis-before-2.jpg"
-              alt="Old Juvenis Medical website — secondary section"
-              className="w-full h-auto"
-            />
-          </div>
-        </MotionDiv>
-
-        {/* Divider */}
+                {/* Divider */}
         <div className="my-14 h-px bg-[rgba(255,255,255,0.06)] md:my-16" />
 
         {/* What we built */}
