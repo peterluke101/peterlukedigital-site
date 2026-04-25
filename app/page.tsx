@@ -268,15 +268,15 @@ export default function Home() {
             <div className="mt-6 grid gap-4 md:mt-8 md:gap-5 md:grid-cols-3">
               {[
                 {
-                  title: "“We don’t rank on Google”",
+                  title: "\u201cWe don\u2019t rank on Google\u201d",
                   text: "Patients search for your services every day, but your practice is not on page 1 when it matters.",
                 },
                 {
-                  title: "“Our site looks old”",
+                  title: "\u201cOur site looks old\u201d",
                   text: "Patients decide whether to trust your practice within seconds, and outdated design hurts credibility fast.",
                 },
                 {
-                  title: "“We get traffic but no calls”",
+                  title: "\u201cWe get traffic but no calls\u201d",
                   text: "A website that does not convert visitors into booked consultations is just an expensive business card.",
                 },
               ].map((item) => (
@@ -545,41 +545,234 @@ export default function Home() {
           </div>
         </MotionSection>
 
-        <MotionSection id="case-study" className="relative overflow-hidden bg-background scroll-mt-24">
+        {/* ── CASE STUDY ── */}
+        <MotionSection id="case-study" className="relative overflow-hidden bg-surface scroll-mt-24">
           <div className="pointer-events-none absolute -left-[5%] top-[-10%] h-[70%] w-[50%] bg-[radial-gradient(ellipse,rgba(0,212,255,0.28),transparent_65%)] blur-[60px]" />
           <div className="pointer-events-none absolute right-[-5%] bottom-[-10%] h-[60%] w-[45%] bg-[radial-gradient(ellipse,rgba(138,43,255,0.25),transparent_65%)] blur-[60px]" />
           <div className="mx-auto w-full max-w-[1200px] px-5 py-14 md:px-7 md:py-[110px]">
-            <p className="text-[12px] font-medium uppercase tracking-[0.14em] text-muted">Client results</p>
-            <h2 className="mt-3 text-2xl font-bold text-text sm:text-3xl">
-              Real results. Real words.
+
+            {/* Header */}
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="rounded-full border border-[rgba(0,212,255,0.35)] bg-[rgba(0,212,255,0.08)] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-cyan">
+                Real Client
+              </span>
+              <span className="rounded-full border border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.04)] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-muted">
+                Launched April 2026
+              </span>
+            </div>
+            <h2 className="mt-4 text-2xl font-bold text-text sm:text-3xl md:text-4xl">
+              From invisible to generating leads<br className="hidden sm:block" /> in under 72 hours.
             </h2>
-            <div className="mt-6 rounded-2xl border md:mt-10 border-[rgba(255,255,255,0.08)] bg-surface-elevated p-6 md:p-[40px]">
-              <div className="flex items-start gap-4">
-                <div>
-                  <p className="text-[17px] leading-[1.7] text-muted italic">
-                    &ldquo;Pete put together a brand-new, aesthetically pleasing, and technically superior site for me in less than 72 hours. We had a conversation about what I was looking for and within hours he was presenting me with rough outlines. He made the desired changes within minutes, and the site was live and generating leads/revenues within a day.&rdquo;
-                  </p>
-                  <p className="mt-4 text-[18px] font-bold leading-[1.5] md:text-[22px] text-text italic">
-                    &ldquo;I have never worked with any web firm that is this responsive, this fast, this proficient and this professional.&rdquo;
-                  </p>
-                  <div className="mt-6 flex items-center gap-4">
-                    <div>
-                      <p className="font-semibold text-text">Dr. Paul Goodkin</p>
-                      <p className="text-[13px] text-muted">CEO, Juvenis Medical LLC</p>
-                      <a href="https://peptidesandhormones.com" target="_blank" rel="noreferrer" className="mt-1 inline-block text-[12px] text-cyan hover:underline">peptidesandhormones.com</a>
-                    </div>
-                  </div>
+            <p className="mt-3 text-[15px] text-muted">
+              Juvenis Medical &mdash; Fort Lauderdale, FL &nbsp;&bull;&nbsp; Dr. Paul Goodkin, DC
+            </p>
+
+            {/* Metrics row */}
+            <div className="mt-8 grid grid-cols-2 gap-4 md:mt-10 md:grid-cols-4">
+              {[
+                { stat: "< 72 hrs", label: "Site built & live" },
+                { stat: "Day 1", label: "First CRM lead in inbox" },
+                { stat: "$0", label: "Upfront cost to Dr. Paul" },
+                { stat: "2×/mo", label: "SEO articles, ongoing" },
+              ].map(({ stat, label }) => (
+                <div
+                  key={stat}
+                  className="rounded-2xl border border-[rgba(255,255,255,0.08)] bg-background p-5 text-center md:p-6"
+                >
+                  <p className="text-[28px] font-bold tracking-[-0.02em] text-text md:text-[32px]">{stat}</p>
+                  <p className="mt-1 text-[12px] text-muted">{label}</p>
                 </div>
+              ))}
+            </div>
+
+            {/* Situation */}
+            <div className="mt-12 md:mt-16">
+              <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-cyan">The Situation</p>
+              <h3 className="mt-3 text-xl font-bold text-text sm:text-2xl">
+                He had a site. It just wasn&apos;t working.
+              </h3>
+              <p className="mt-4 max-w-[760px] text-[15px] leading-[1.8] text-text-bright">
+                Dr. Paul Goodkin, DC had already built something real — a functional medicine and hormone optimization practice in Fort Lauderdale treating conditions most primary care doctors don&apos;t even screen for. His patients loved him. But his digital presence told a different story.
+              </p>
+              <p className="mt-4 max-w-[760px] text-[15px] leading-[1.8] text-text-bright">
+                His WordPress site had generic branding that signaled &ldquo;chiropractor&rdquo; — not the cutting-edge hormone and peptide clinic he had become. He thought his SEO was in decent shape. A quick audit revealed the opposite: the wrong Google Business Profile category, irrelevant content getting indexed, and a contact form that accepted submissions but never delivered them. Leads were falling through the floor.
+              </p>
+            </div>
+
+            {/* Before screenshots */}
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 md:mt-10">
+              <div className="overflow-hidden rounded-2xl border border-[rgba(255,255,255,0.08)]">
+                <div className="border-b border-[rgba(255,255,255,0.06)] bg-background px-4 py-2">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-muted">Before</p>
+                </div>
+                <Image
+                  src="/assets/images/case-study/juvenis-before-1.jpg"
+                  alt="Juvenis Medical old website — before redesign"
+                  width={600}
+                  height={420}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="overflow-hidden rounded-2xl border border-[rgba(255,255,255,0.08)]">
+                <div className="border-b border-[rgba(255,255,255,0.06)] bg-background px-4 py-2">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-muted">Before</p>
+                </div>
+                <Image
+                  src="/assets/images/case-study/juvenis-before-2.jpg"
+                  alt="Juvenis Medical old website — contact form issues"
+                  width={600}
+                  height={420}
+                  className="w-full h-auto object-cover"
+                />
               </div>
             </div>
-            <div className="mt-8 text-center">
-              <p className="text-muted text-[15px]">Site live and generating leads within 24 hours of launch.</p>
+
+            {/* What we built */}
+            <div className="mt-12 md:mt-16">
+              <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-cyan">What We Built</p>
+              <h3 className="mt-3 text-xl font-bold text-text sm:text-2xl">
+                A complete rebuild. Zero downtime.
+              </h3>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2 md:gap-5">
+                {[
+                  {
+                    title: "Custom site from scratch",
+                    desc: "Dark, premium brand built for Juvenis Medical — positioning Dr. Paul as the specialist he actually is. Fast, mobile-first, SEO-ready out of the box.",
+                  },
+                  {
+                    title: "Live CRM integration",
+                    desc: "Every form submission goes directly into Zoho CRM and triggers an instant email to Dr. Paul's inbox. No lead lands in a black hole.",
+                  },
+                  {
+                    title: "SEO blog + content engine",
+                    desc: "Professionally written, clinically accurate articles targeting the exact terms patients search — testosterone, peptides, GLP-1, BHRT. Published and indexed.",
+                  },
+                  {
+                    title: "Google Business Profile cleanup",
+                    desc: "Corrected the GBP category, updated photos, and began flagging reviews left over from a previous practice. Local search signals rebuilt from the ground up.",
+                  },
+                ].map(({ title, desc }) => (
+                  <div
+                    key={title}
+                    className="rounded-2xl border border-[rgba(255,255,255,0.08)] bg-background p-5 md:p-6"
+                  >
+                    <div className="flex items-start gap-3">
+                      <span className="mt-[2px] inline-flex h-[20px] w-[20px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[rgba(0,212,255,0.55)] text-[11px] text-cyan">
+                        ✓
+                      </span>
+                      <div>
+                        <p className="font-semibold text-text">{title}</p>
+                        <p className="mt-2 text-[13.5px] leading-[1.65] text-text-bright">{desc}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* After screenshots */}
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 md:mt-10">
+              <div className="overflow-hidden rounded-2xl border border-[rgba(0,212,255,0.25)]">
+                <div className="border-b border-[rgba(0,212,255,0.15)] bg-[rgba(0,212,255,0.06)] px-4 py-2">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-cyan">After</p>
+                </div>
+                <Image
+                  src="/assets/images/case-study/juvenis-after-1.jpg"
+                  alt="Juvenis Medical new website — after redesign"
+                  width={600}
+                  height={420}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="overflow-hidden rounded-2xl border border-[rgba(0,212,255,0.25)]">
+                <div className="border-b border-[rgba(0,212,255,0.15)] bg-[rgba(0,212,255,0.06)] px-4 py-2">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-cyan">After — Blog</p>
+                </div>
+                <Image
+                  src="/assets/images/case-study/juvenis-blog-desktop.jpg"
+                  alt="Juvenis Medical — SEO blog with sidebar CTA and article structure"
+                  width={600}
+                  height={420}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Content engine callout */}
+            <div className="mt-10 overflow-hidden rounded-2xl border border-[rgba(255,255,255,0.08)] bg-background md:mt-12">
+              <div className="relative overflow-hidden p-6 md:p-10">
+                <div className="pointer-events-none absolute -right-[10%] -top-[20%] h-[200%] w-[60%] bg-[radial-gradient(ellipse,rgba(138,43,255,0.2),transparent_65%)] blur-[50px]" />
+                <p className="relative text-[12px] font-semibold uppercase tracking-[0.14em] text-cyan">The Content Engine</p>
+                <h3 className="relative mt-3 text-xl font-bold text-text sm:text-2xl">
+                  Every blog post works three jobs at once.
+                </h3>
+                <p className="relative mt-3 max-w-[640px] text-[14px] leading-[1.75] text-text-bright">
+                  Google rewards sites that publish fresh, relevant content — and punishes the ones that sit still. Each article we write for Dr. Paul does more than rank on search:
+                </p>
+                <div className="relative mt-6 grid gap-4 sm:grid-cols-3">
+                  {[
+                    {
+                      num: "01",
+                      title: "Ranks on Google",
+                      desc: "Patients searching for low testosterone treatment, peptide therapy, or GLP-1 in Fort Lauderdale find Dr. Paul — not a competitor.",
+                    },
+                    {
+                      num: "02",
+                      title: "Becomes social content",
+                      desc: "Each article is repurposed into posts across his social platforms. One piece of content, thirty touchpoints. Zero extra work for Dr. Paul.",
+                    },
+                    {
+                      num: "03",
+                      title: "Builds authority",
+                      desc: "Patients read his content and arrive at consultations already educated, already trusting him, and already ready to book.",
+                    },
+                  ].map(({ num, title, desc }) => (
+                    <div key={num} className="rounded-xl border border-[rgba(255,255,255,0.07)] bg-surface-elevated p-5">
+                      <p className="text-[13px] font-bold tracking-[0.1em] text-cyan">{num}</p>
+                      <p className="mt-2 font-semibold text-text">{title}</p>
+                      <p className="mt-2 text-[13px] leading-[1.65] text-text-bright">{desc}</p>
+                    </div>
+                  ))}
+                </div>
+                <p className="relative mt-6 text-[14px] font-semibold text-text-bright">
+                  Dr. Paul doesn&apos;t write a word. He sees patients. We handle everything else.
+                </p>
+              </div>
+            </div>
+
+            {/* Dr. Paul quote */}
+            <div className="mt-10 rounded-2xl border border-[rgba(255,255,255,0.08)] bg-background p-6 md:mt-12 md:p-10">
+              <p className="text-[16px] leading-[1.8] text-muted italic md:text-[17px]">
+                &ldquo;Pete put together a brand-new, aesthetically pleasing, and technically superior site for me in less than 72 hours. We had a conversation about what I was looking for and within hours he was presenting me with rough outlines. He made the desired changes within minutes, and the site was live and generating leads within a day.&rdquo;
+              </p>
+              <p className="mt-6 text-[22px] font-bold leading-[1.4] text-text italic md:text-[26px]">
+                &ldquo;I have never worked with any web firm that is this responsive, this fast, this proficient and this professional.&rdquo;
+              </p>
+              <div className="mt-6 flex flex-col gap-1 border-t border-[rgba(255,255,255,0.08)] pt-6 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <p className="font-semibold text-text">Dr. Paul Goodkin, DC</p>
+                  <p className="text-[13px] text-muted">Founder & CEO, Juvenis Medical LLC</p>
+                </div>
+                <a
+                  href="https://peptidesandhormones.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-2 text-[13px] text-cyan hover:underline sm:mt-0"
+                >
+                  peptidesandhormones.com →
+                </a>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="mt-10 text-center md:mt-12">
+              <p className="text-[15px] text-muted">Ready to see what this looks like for your practice?</p>
               <a
                 href={calendlyLink}
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => trackAuditCtaClick("case-study")}
-                className="mt-8 inline-flex rounded-md border border-transparent bg-primary px-[22px] py-[14px] text-[15px] font-bold tracking-[-0.01em] text-text shadow-[0_0_40px_-8px_rgba(0,102,255,0.45)] transition-all duration-[180ms] hover:bg-[#3385FF]"
+                className="mt-6 inline-flex rounded-md border border-transparent bg-primary px-[22px] py-[14px] text-[15px] font-bold tracking-[-0.01em] text-text shadow-[0_0_40px_-8px_rgba(0,102,255,0.45)] transition-all duration-[180ms] hover:bg-[#3385FF]"
               >
                 Get your free website
               </a>
@@ -587,7 +780,7 @@ export default function Home() {
           </div>
         </MotionSection>
 
-        <MotionSection id="who-we-help" className="relative overflow-hidden bg-surface scroll-mt-24">
+        <MotionSection id="who-we-help" className="relative overflow-hidden bg-background scroll-mt-24">
           <div className="pointer-events-none absolute -left-[5%] top-[10%] h-[70%] w-[50%] bg-[radial-gradient(ellipse,rgba(0,212,255,0.28),transparent_65%)] blur-[60px]" />
           <div className="mx-auto w-full max-w-[1200px] px-5 py-14 md:px-7 md:py-[110px]">
             <h2 className="text-2xl font-bold text-text sm:text-3xl">
@@ -616,7 +809,7 @@ export default function Home() {
           </div>
         </MotionSection>
 
-        <MotionSection id="about" className="relative overflow-hidden bg-background scroll-mt-24">
+        <MotionSection id="about" className="relative overflow-hidden bg-surface scroll-mt-24">
           <div className="pointer-events-none absolute right-[-5%] top-[5%] h-[80%] w-[55%] bg-[radial-gradient(ellipse,rgba(138,43,255,0.28),transparent_65%)] blur-[60px]" />
           <div className="mx-auto grid w-full max-w-[1200px] gap-8 px-5 py-14 md:gap-[56px] md:px-7 md:py-[110px] lg:grid-cols-[320px_1fr]">
             <div className="relative h-[260px] w-full max-w-[320px] md:h-[320px] md:w-[320px] overflow-hidden rounded-[20px] border border-[rgba(255,255,255,0.08)] bg-surface">
