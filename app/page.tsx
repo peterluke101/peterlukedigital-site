@@ -258,10 +258,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="border-y border-[rgba(255,255,255,0.08)] bg-[#0F0F18] px-7 py-[14px] text-center text-sm text-text">
-          First inbound lead for Juvenis Medical within 24 hours of launch
-        </section>
-
         <MotionSection id="problems" className="relative overflow-hidden bg-surface scroll-mt-24">
           <div className="pointer-events-none absolute -right-[10%] bottom-[-20%] h-[70%] w-[55%] bg-[radial-gradient(ellipse,rgba(255,0,224,0.28),transparent_65%)] blur-[60px]" />
           <div className="mx-auto w-full max-w-[1200px] px-5 py-14 md:px-7 md:py-[110px]">
@@ -272,15 +268,15 @@ export default function Home() {
             <div className="mt-6 grid gap-4 md:mt-8 md:gap-5 md:grid-cols-3">
               {[
                 {
-                  title: "We don't rank on Google",
+                  title: "“We don’t rank on Google”",
                   text: "Patients search for your services every day, but your practice is not on page 1 when it matters.",
                 },
                 {
-                  title: "Our site looks old",
+                  title: "“Our site looks old”",
                   text: "Patients decide whether to trust your practice within seconds, and outdated design hurts credibility fast.",
                 },
                 {
-                  title: "We get traffic but no calls",
+                  title: "“We get traffic but no calls”",
                   text: "A website that does not convert visitors into booked consultations is just an expensive business card.",
                 },
               ].map((item) => (
@@ -447,17 +443,17 @@ export default function Home() {
                 </a>
               </div>
               {/* Testimonial — desktop only beside pricing, mobile stacks below */}
-              <div className="flex flex-col justify-center gap-6">
-                <GradientRing size={64} />
-                <p className="text-[17px] leading-[1.7] text-muted italic">
+              <div className="flex flex-col justify-center gap-8 py-4">
+                <p className="text-[15px] leading-[1.8] text-muted italic">
                   &ldquo;Pete put together a brand-new, aesthetically pleasing, and technically superior site for me in less than 72 hours. He made the desired changes within minutes, and the site was live and generating leads within a day.&rdquo;
                 </p>
-                <p className="text-[21px] font-bold leading-[1.5] text-text italic">
+                <p className="text-[26px] font-bold leading-[1.4] text-text italic lg:text-[28px]">
                   &ldquo;I have never worked with any web firm that is this responsive, this fast, this proficient and this professional.&rdquo;
                 </p>
-                <div>
+                <div className="border-t border-[rgba(255,255,255,0.08)] pt-6">
                   <p className="font-semibold text-text">Dr. Paul Goodkin</p>
                   <p className="text-[13px] text-muted">CEO, Juvenis Medical LLC</p>
+                  <a href="https://peptidesandhormones.com" target="_blank" rel="noreferrer" className="mt-1 inline-block text-[12px] text-cyan hover:underline">peptidesandhormones.com</a>
                 </div>
               </div>
             </div>
@@ -559,7 +555,6 @@ export default function Home() {
             </h2>
             <div className="mt-6 rounded-2xl border md:mt-10 border-[rgba(255,255,255,0.08)] bg-surface-elevated p-6 md:p-[40px]">
               <div className="flex items-start gap-4">
-                <GradientRing size={48} className="shrink-0 mt-1" />
                 <div>
                   <p className="text-[17px] leading-[1.7] text-muted italic">
                     &ldquo;Pete put together a brand-new, aesthetically pleasing, and technically superior site for me in less than 72 hours. We had a conversation about what I was looking for and within hours he was presenting me with rough outlines. He made the desired changes within minutes, and the site was live and generating leads/revenues within a day.&rdquo;
@@ -654,7 +649,13 @@ export default function Home() {
           <div className="pointer-events-none absolute -right-[10%] bottom-[-20%] h-[90%] w-[60%] bg-[radial-gradient(ellipse,rgba(255,0,224,0.35),transparent_65%)] blur-[60px]" />
           <div className="mx-auto w-full max-w-[1200px] px-5 py-14 md:px-7 md:py-[120px] text-center">
             <div className="mb-5 flex justify-center md:mb-8">
-              <GradientRing size={120} />
+              <Image
+                src="/assets/images/logo-primary.png"
+                alt="Peter Luke Digital"
+                width={120}
+                height={120}
+                className="h-[120px] w-[120px] object-contain"
+              />
             </div>
             <h2 className="text-2xl font-bold text-text sm:text-4xl">
               Is your website losing you patients?
